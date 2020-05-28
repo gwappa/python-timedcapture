@@ -44,31 +44,33 @@ cdef extern from "capture.h":
         char        pixel_format[4]
         # field_type is not exported
 
-    Device* capture_device_init()
-    void    capture_device_dealloc(Device* device)
+    Device* capture_device_init() nogil
+    void    capture_device_dealloc(Device* device) nogil
 
-    Format* capture_format_init()
-    void    capture_format_dealloc(Format* format)
+    Format* capture_format_init() nogil
+    void    capture_format_dealloc(Format* format) nogil
 
-    int     capture_open(Device* device, const char* path)
-    int     capture_close(Device* device)
+    int     capture_open(Device* device, const char* path) nogil
+    bool_t  capture_is_open(Device* device) nogil
+    int     capture_close(Device* device) nogil
 
-    int     capture_get_format(Device* device, Format* format)
-    int     capture_set_format(Device* device, const Format* format)
+    int     capture_get_format(Device* device, Format* format) nogil
+    int     capture_set_format(Device* device, const Format* format) nogil
 
-    uint16  capture_get_input_buffer_num(Device* device)
-    int     capture_set_input_buffer_num(Device* device, const uint16 num)
+    uint16  capture_get_input_buffer_num(Device* device) nogil
+    int     capture_set_input_buffer_num(Device* device, const uint16 num) nogil
 
     int     capture_has_control(Device* device,
                                 const uint32 cid,
-                                bint* out)
+                                bint* out) nogil
     int     capture_get_control(Device* device,
                                 const uint32 cid,
-                                int32* value)
+                                int32* value) nogil
     int     capture_set_control(Device* device,
                                 const uint32 cid,
-                                const int32 value)
+                                const int32 value) nogil
 
     int     capture_start(Device *device, uint16* buffer)
-    int     capture_read(Device* device, const bool_t read_unbuffered)
-    int     capture_stop(Device* device)
+    bool_t  capture_is_running(Device* device)
+    int     capture_read(Device* device, const bool_t read_unbuffered) nogil
+    int     capture_stop(Device* device) nogil

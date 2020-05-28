@@ -114,6 +114,8 @@ void    capture_format_dealloc(Format* format);
  */
 int capture_open(Device* device, const char* path);
 
+bool capture_is_open(Device* device);
+
 /**
  *  closes the device.
  *  returns Success (0) on success, and Failure (-1) otherwise.
@@ -175,6 +177,8 @@ int capture_get_control(Device* device,
  *  if it is set to NULL, the function prepares the storage by itself.
  */
 int capture_start(Device* device, uint16_t* buffer);
+
+bool capture_is_running(Device* device);
 
 /**
  *  waits until a frame is read and copies it into `stored`.

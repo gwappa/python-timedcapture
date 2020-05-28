@@ -193,6 +193,11 @@ int capture_open(Device* device, const char* path)
     return Success;
 }
 
+bool capture_is_open(Device* device)
+{
+    return (device->status != DeviceIsNotAvailable);
+}
+
 int capture_close(Device* device)
 {
     switch(device->status)
@@ -570,6 +575,11 @@ int capture_start(Device* device, uint16_t* buffer)
 #endif
     device->status = DeviceIsCapturing;
     return Success;
+}
+
+bool capture_is_running(Device* device)
+{
+    return (device->status == DeviceIsCapturing);
 }
 
 int capture_read(Device* device, const bool read_unbuffered)

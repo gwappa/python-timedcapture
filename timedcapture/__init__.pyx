@@ -25,7 +25,6 @@
 # cython: language_level = 3
 
 import sys
-from libc.stdio cimport printf
 from libc.string cimport strerror
 from libcpp cimport bool as bool_t
 from cython.view cimport array as cythonarray
@@ -38,9 +37,6 @@ DEF V4L2_EXPOSURE_MANUAL     = 1
 DEF V4L2_CID_GAIN            = 0x00980913
 DEF EXT_CID_GAIN_AUTO        = 0x0199e205
 DEF EXT_GAIN_MANUAL          = 0
-
-def print_number(int num):
-    printf("number: %d\n", num)
 
 cdef cstring_to_str(char* s):
     cdef bytes bs = bytes(s)

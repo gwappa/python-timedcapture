@@ -31,7 +31,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 extensions = [
-    setuptools.Extension("timedcapture", ["timedcapture/*.pyx"])
+    setuptools.Extension("timedcapture",
+                         ["timedcapture/*.pyx", "timedcapture/capture.c"],
+                         include_dirs=["timedcapture",])
 ]
 
 setuptools.setup(

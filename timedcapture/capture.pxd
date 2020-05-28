@@ -27,6 +27,7 @@ cimport numpy as np_c
 ctypedef np_c.npy_uint16 uint16
 ctypedef np_c.npy_uint32 uint32
 ctypedef np_c.npy_int32  int32
+from libcpp cimport bool as bool_t
 
 cdef extern from "capture.h":
 
@@ -68,6 +69,6 @@ cdef extern from "capture.h":
                                 const uint32 cid,
                                 const int32 value)
 
-    int     capture_start(Device *device)
-    int     capture_read(Device* device, const bool read_unbuffered=False)
+    int     capture_start(Device *device, uint16* buffer)
+    int     capture_read(Device* device, const bool_t read_unbuffered)
     int     capture_stop(Device* device)

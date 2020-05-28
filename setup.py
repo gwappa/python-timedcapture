@@ -24,6 +24,7 @@
 
 import setuptools
 from Cython.Build import cythonize
+import numpy as np
 
 VERSION_STR = "0.1.0"
 
@@ -33,7 +34,7 @@ with open("README.md", "r") as fh:
 extensions = [
     setuptools.Extension("timedcapture",
                          ["timedcapture/*.pyx", "timedcapture/capture.c"],
-                         include_dirs=["timedcapture",])
+                         include_dirs=["timedcapture", np.get_include()])
 ]
 
 setuptools.setup(

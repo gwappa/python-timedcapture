@@ -66,6 +66,7 @@
      uint16_t   image_width;
      uint16_t   image_height;
      uint16_t*  stored;
+     bool       store_extern;
 
      /**
       * when a function returned Failure(-1), the following values will be filled.
@@ -169,8 +170,11 @@ int capture_get_control(Device* device,
  *  sets up the input buffer (with the number specified in `input_buffer_num`)
  *  and starts capturing frames.
  *  returns Success (0) on success, and Failure (-1) otherwise.
+ *
+ *  you can provide the buffer object as the `storage` parameter.
+ *  if it is set to NULL, the function prepares the storage by itself.
  */
-int capture_start(Device* device);
+int capture_start(Device* device, uint16_t* buffer);
 
 /**
  *  waits until a frame is read and copies it into `stored`.

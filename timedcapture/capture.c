@@ -43,10 +43,6 @@
 #define DEVICE_FLAG (O_RDWR | O_NONBLOCK)
 //#define DEBUG
 
-// these values were for ImagingSource cameras
-//#define EXT_CID_EXPOSURE_TIME_US ((uint32_t)0x0199e201)
-//#define EXT_CID_GAIN_AUTO ((uint32_t)0x0199e205)
-
 static void read_pixel_format(uint32_t value, char* out)
 {
     out[3] = (char)((value >> 24) & (uint32_t)0xFF);
@@ -76,7 +72,9 @@ static void free_input_buffers(Device* device, const size_t size)
     free(device->input_buffer);
     free(device->input_buffer_size);
     free(device->input_buffer_info);
-    free(device->stored);
+    if (!device->store_extern)
+        free(device->stored);
+    device->store_extern = false;
 #ifdef DEBUG
     fprintf(stderr, "done.\n");
 #endif
@@ -92,6 +90,7 @@ Device* capture_device_init()
     dev->input_buffer_num = DEFAULT_BUFFER_NUM;
     dev->fd = -1;
     dev->status = DeviceIsNotAvailable;
+    dev->store_extern = false;
     return dev;
 }
 
@@ -432,7 +431,7 @@ int capture_set_control(Device* device,
     return Success;
 }
 
-int capture_start(Device* device)
+int capture_start(Device* device, uint16_t* buffer)
 {
     switch(device->status)
     {
@@ -480,9 +479,15 @@ int capture_start(Device* device)
     // 3/5. prepare buffer address storage
     device->input_buffer      = (void **)malloc(sizeof(void *) * device->input_buffer_num);
     device->input_buffer_size = (uint32_t *)malloc(sizeof(uint32_t) * device->input_buffer_num);
-    device->stored            = (uint16_t *)malloc(sizeof(uint16_t)
-                                                    * (device->image_width)
-                                                    * (device->image_height));
+    if (buffer == NULL) {
+        device->stored       = (uint16_t *)malloc(sizeof(uint16_t)
+                                                  * (device->image_width)
+                                                  * (device->image_height));
+        device->store_extern = false;
+    } else {
+        device->stored       = buffer;
+        device->store_extern = true;
+    }
     device->input_buffer_info = malloc(sizeof(struct v4l2_buffer));
 
     // 4/5. mmap buffer info

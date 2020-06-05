@@ -36,7 +36,9 @@ DEBUG = True
 
 DEF EXT_CID_EXPOSURE_TIME_US = 0x0199e201
 DEF V4L2_CID_EXPOSURE_AUTO   = 0x009a0901
+DEF V4L2_CID_EXPOSURE_ABSOLUTE = 0x009a0902
 DEF V4L2_EXPOSURE_MANUAL     = 1
+DEF V4L2_EXPOSURE_UNIT       = 10
 
 DEF V4L2_CID_GAIN            = 0x00980913
 DEF EXT_CID_GAIN_AUTO        = 0x0199e205
@@ -110,8 +112,9 @@ def log(msg, end="\n", file=sys.stderr):
 cdef class Device:
     cdef ccapture.Device* device
     cdef ccapture.Format* format
-    cdef str              path
+    cdef str              path_str
     cdef uint16[:,:]      buffer
+    cdef bool_t           has_exp_us
 
     def __cinit__(self,
                   str path="/dev/video0",
@@ -136,7 +139,7 @@ cdef class Device:
             ccapture.capture_format_dealloc(self.format)
             self.format = NULL
             raise e
-        self.path = path
+        self.path_str = path
 
         # configure format and buffer
         self.format.width  = width
@@ -144,7 +147,12 @@ cdef class Device:
         try:
             set_format(self.device, self.format)
             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
-            set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)
+            if has_control(self.device, EXT_CID_GAIN_AUTO):
+                set_control(self.device, EXT_CID_GAIN_AUTO,    EXT_GAIN_MANUAL)
+            else:
+                import sys
+                print(f"***{path}: control 'gain_auto' not found",
+                      file=sys.stdout, flush=True)
         except RuntimeError as e:
             ccapture.capture_close(self.device)
             ccapture.capture_device_dealloc(self.device)
@@ -153,6 +161,15 @@ cdef class Device:
             self.format = NULL
             raise e
         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
+        self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)
+        if self.has_exp_us == False:
+            import sys
+            print(f"***{path}: control 'exposure_time_us' not found",
+                  file=sys.stdout, flush=True)
+
+    @property
+    def path(self):
+        return self.path_str
 
     @property
     def width(self):
@@ -187,11 +204,17 @@ cdef class Device:
 
     @property
     def exposure_us(self):
-        return self.read_control_value(EXT_CID_EXPOSURE_TIME_US, "exposure_us")
+        if self.has_exp_us == True:
+            return self.read_control_value(EXT_CID_EXPOSURE_TIME_US, "exposure_us")
+        else:
+            return self.read_control_value(V4L2_CID_EXPOSURE_ABSOLUTE, "exposure_absolute")*V4L2_EXPOSURE_UNIT
 
     @exposure_us.setter
     def exposure_us(self, int32 exposure_us):
-        self.write_control_value(EXT_CID_EXPOSURE_TIME_US, exposure_us, "exposure_us")
+        if self.has_exp_us == True:
+            self.write_control_value(EXT_CID_EXPOSURE_TIME_US, exposure_us, "exposure_us")
+        else:
+            self.write_control_value(V4L2_CID_EXPOSURE_ABSOLUTE, exposure_us // 10, "exposure_absolute")
 
     @property
     def gain(self):

@@ -404,9 +404,7 @@ int capture_set_control(Device* device,
         case DeviceIsIdle:
             break;
         case DeviceIsCapturing:
-            device->error_code = EINVAL;
-            strcpy(device->error_cause, "cannot update controls during capture");
-            return Failure;
+            break;
     }
 
     bool available;

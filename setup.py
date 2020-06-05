@@ -26,7 +26,7 @@ import setuptools
 from Cython.Build import cythonize
 import numpy as np
 
-VERSION_STR = "0.1.1"
+VERSION_STR = "0.1.2"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()

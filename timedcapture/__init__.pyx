@@ -246,7 +246,7 @@ cdef class Device:
     def stop_capture(self):
         stop_capture(self.device)
 
-    def __dealloc__(self):
+    def close(self):
         if self.device is not NULL:
             if ccapture.capture_is_open(self.device) == True:
                 if ccapture.capture_is_running(self.device) == True:
@@ -255,6 +255,9 @@ cdef class Device:
             ccapture.capture_device_dealloc(self.device)
         if self.format is not NULL:
             ccapture.capture_format_dealloc(self.format)
+
+    def __dealloc__(self):
+        self.close()
 
 def test_calls(path="/dev/video0",
                uint16 width=640,

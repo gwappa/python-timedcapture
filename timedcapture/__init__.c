@@ -1144,8 +1144,8 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 struct __pyx_opt_args_12timedcapture_8__init___start_capture;
 struct __pyx_opt_args_12timedcapture_8__init___read_frame;
-struct __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc;
-typedef struct __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc;
+struct __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc;
+typedef struct __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc;
 
 /* "timedcapture/__init__.pyx":89
  *         raise RuntimeError(format_error_message(device))
@@ -1171,14 +1171,14 @@ struct __pyx_opt_args_12timedcapture_8__init___read_frame {
   bool read_unbuffered;
 };
 
-/* "timedcapture/__init__.pyx":195
+/* "timedcapture/__init__.pyx":200
  * 
  *     @size.setter
  *     def size(self, (uint16, uint16) width_height):             # <<<<<<<<<<<<<<
  *         self.format.width  = width_height[0]
  *         self.format.height = width_height[1]
  */
-struct __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc {
+struct __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc {
   __pyx_t_12timedcapture_8__init___uint16 f0;
   __pyx_t_12timedcapture_8__init___uint16 f1;
 };
@@ -1598,6 +1598,9 @@ static CYTHON_INLINE void __Pyx__ExceptionSwap(PyThreadState *tstate, PyObject *
 static CYTHON_INLINE void __Pyx_ExceptionSwap(PyObject **type, PyObject **value, PyObject **tb);
 #endif
 
+/* Import.proto */
+static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
+
 /* IsLittleEndian.proto */
 static CYTHON_INLINE int __Pyx_Is_Little_Endian(void);
 
@@ -1636,14 +1639,8 @@ static CYTHON_INLINE int __pyx_sub_acquisition_count_locked(
 static CYTHON_INLINE void __Pyx_INC_MEMVIEW(__Pyx_memviewslice *, int, int);
 static CYTHON_INLINE void __Pyx_XDEC_MEMVIEW(__Pyx_memviewslice *, int, int);
 
-/* Import.proto */
-static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
-
 /* None.proto */
 static CYTHON_INLINE long __Pyx_div_long(long, long);
-
-/* ImportFrom.proto */
-static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
 
 /* PyCFunctionFastCall.proto */
 #if CYTHON_FAST_PYCCALL
@@ -1677,6 +1674,9 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func);
 #else
 #define __Pyx_PyObject_CallNoArg(func) __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL)
 #endif
+
+/* ImportFrom.proto */
+static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
 
 /* PyObjectSetAttrStr.proto */
 #if CYTHON_USE_TYPE_SLOTS
@@ -1922,7 +1922,7 @@ static int __pyx_slices_overlap(__Pyx_memviewslice *slice1,
 static CYTHON_INLINE PyObject *__pyx_capsule_create(void *p, const char *sig);
 
 /* FromPyCTupleUtility.proto */
-static __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_convert__from_py___pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc(PyObject *);
+static __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_convert__from_py___pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc(PyObject *);
 
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_npy_uint16(npy_uint16 value);
@@ -2229,6 +2229,7 @@ static const char __pyx_k_O[] = "O";
 static const char __pyx_k_c[] = "c";
 static const char __pyx_k__2[] = ")";
 static const char __pyx_k__4[] = "\n";
+static const char __pyx_k__6[] = "***";
 static const char __pyx_k_id[] = "id";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k__10[] = " (";
@@ -2262,6 +2263,7 @@ static const char __pyx_k_array[] = "array";
 static const char __pyx_k_bpath[] = "bpath";
 static const char __pyx_k_cause[] = "cause";
 static const char __pyx_k_class[] = "__class__";
+static const char __pyx_k_close[] = "close";
 static const char __pyx_k_error[] = "error";
 static const char __pyx_k_flags[] = "flags";
 static const char __pyx_k_flush[] = "flush";
@@ -2320,7 +2322,6 @@ static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_MemoryError[] = "MemoryError";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_exposure_us[] = "exposure_us";
-static const char __pyx_k_has_control[] = "has_control";
 static const char __pyx_k_test_device[] = "---test_device---";
 static const char __pyx_k_INFO_width_2[] = "[INFO] width=";
 static const char __pyx_k_RuntimeError[] = "RuntimeError";
@@ -2366,13 +2367,14 @@ static const char __pyx_k_no_gain_setting_detected[] = "***no gain setting detec
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
 static const char __pyx_k_timedcapture___init___pyx[] = "timedcapture/__init__.pyx";
 static const char __pyx_k_INFO_initializing_a_device[] = "[INFO] initializing a device: ";
+static const char __pyx_k_control_gain_auto_not_found[] = ": control 'gain_auto' not found";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static const char __pyx_k_device_does_not_have_control[] = "device does not have control: ";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
 static const char __pyx_k_strided_and_direct_or_indirect[] = "<strided and direct or indirect>";
 static const char __pyx_k_INFO_reading_and_saving_1_frame[] = "[INFO] reading and saving 1 frame.";
-static const char __pyx_k_control_exposure_time_us_not_fo[] = "***control 'exposure_time_us' not found from ";
+static const char __pyx_k_control_exposure_time_us_not_fo[] = ": control 'exposure_time_us' not found";
 static const char __pyx_k_no_exposure_time_us_setting_det[] = "***no exposure_time_us setting detected";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
@@ -2438,6 +2440,7 @@ static PyObject *__pyx_n_s_View_MemoryView;
 static PyObject *__pyx_kp_u__10;
 static PyObject *__pyx_kp_u__2;
 static PyObject *__pyx_kp_u__4;
+static PyObject *__pyx_kp_u__6;
 static PyObject *__pyx_n_s_allocate_buffer;
 static PyObject *__pyx_n_s_array;
 static PyObject *__pyx_n_s_base;
@@ -2449,10 +2452,12 @@ static PyObject *__pyx_kp_u_cannot_control;
 static PyObject *__pyx_n_s_cause;
 static PyObject *__pyx_n_s_class;
 static PyObject *__pyx_n_s_cline_in_traceback;
+static PyObject *__pyx_n_s_close;
 static PyObject *__pyx_kp_u_code;
 static PyObject *__pyx_kp_s_contiguous_and_direct;
 static PyObject *__pyx_kp_s_contiguous_and_indirect;
 static PyObject *__pyx_kp_u_control_exposure_time_us_not_fo;
+static PyObject *__pyx_kp_u_control_gain_auto_not_found;
 static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_kp_u_dev_video0;
 static PyObject *__pyx_n_s_device;
@@ -2480,7 +2485,6 @@ static PyObject *__pyx_n_u_gain;
 static PyObject *__pyx_kp_u_gain_2;
 static PyObject *__pyx_n_s_getstate;
 static PyObject *__pyx_kp_s_got_differing_extents_in_dimensi;
-static PyObject *__pyx_n_s_has_control;
 static PyObject *__pyx_n_s_height;
 static PyObject *__pyx_kp_u_height_2;
 static PyObject *__pyx_kp_u_height_3;
@@ -2573,7 +2577,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_5width_2__set__(struct __py
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6height___get__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
 static int __pyx_pf_12timedcapture_8__init___6Device_6height_2__set__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, __pyx_t_12timedcapture_8__init___uint16 __pyx_v_height); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4size___get__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
-static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_v_width_height); /* proto */
+static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_v_width_height); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
 static int __pyx_pf_12timedcapture_8__init___6Device_11exposure_us_2__set__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, __pyx_t_12timedcapture_8__init___int32 __pyx_v_exposure_us); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4gain___get__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
@@ -2581,9 +2585,10 @@ static int __pyx_pf_12timedcapture_8__init___6Device_4gain_2__set__(struct __pyx
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_2start_capture(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4read_frame(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, bool __pyx_v_read_unbuffered, bool __pyx_v_copy); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6stop_capture(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
-static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_12timedcapture_8__init___6Device_10__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_12timedcapture_8__init___6Device_12__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12timedcapture_8__init___6Device_8close(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
+static void __pyx_pf_12timedcapture_8__init___6Device_10__dealloc__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12timedcapture_8__init___6Device_12__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12timedcapture_8__init___6Device_14__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_path, __pyx_t_12timedcapture_8__init___uint16 __pyx_v_width, __pyx_t_12timedcapture_8__init___uint16 __pyx_v_height, __pyx_t_12timedcapture_8__init___int32 __pyx_v_exposure_us, __pyx_t_12timedcapture_8__init___int32 __pyx_v_gain); /* proto */
 static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_path, __pyx_t_12timedcapture_8__init___uint16 __pyx_v_width, __pyx_t_12timedcapture_8__init___uint16 __pyx_v_height, __pyx_t_12timedcapture_8__init___int32 __pyx_v_exposure_us, __pyx_t_12timedcapture_8__init___int32 __pyx_v_gain); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
@@ -2637,12 +2642,10 @@ static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject 
 static PyObject *__pyx_tp_new__memoryviewslice(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
-static PyObject *__pyx_int_26862081;
 static PyObject *__pyx_int_184977713;
 static PyObject *__pyx_int_neg_1;
 static __Pyx_memviewslice __pyx_k__3;
 static PyObject *__pyx_k__5;
-static PyObject *__pyx_tuple__6;
 static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__9;
@@ -4077,10 +4080,12 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
   PyObject *__pyx_t_14 = NULL;
   PyObject *__pyx_t_15 = NULL;
   PyObject *__pyx_t_16 = NULL;
-  char const *__pyx_t_17;
-  PyObject *__pyx_t_18 = NULL;
-  __Pyx_memviewslice __pyx_t_19 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  bool __pyx_t_20;
+  Py_ssize_t __pyx_t_17;
+  Py_UCS4 __pyx_t_18;
+  char const *__pyx_t_19;
+  PyObject *__pyx_t_20 = NULL;
+  __Pyx_memviewslice __pyx_t_21 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  bool __pyx_t_22;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
   /* "timedcapture/__init__.pyx":124
@@ -4397,7 +4402,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  *         try:
  *             set_format(self.device, self.format)             # <<<<<<<<<<<<<<
  *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
- *             set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)
+ *             if has_control(self.device, EXT_CID_GAIN_AUTO):
  */
       __pyx_t_8 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 148, __pyx_L22_error)
       __Pyx_GOTREF(__pyx_t_8);
@@ -4407,8 +4412,8 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  *         try:
  *             set_format(self.device, self.format)
  *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)             # <<<<<<<<<<<<<<
- *             set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)
- *         except RuntimeError as e:
+ *             if has_control(self.device, EXT_CID_GAIN_AUTO):
+ *                 set_control(self.device, EXT_CID_GAIN_AUTO,    EXT_GAIN_MANUAL)
  */
       __pyx_t_8 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_self->device, 0x9A0901, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 149, __pyx_L22_error)
       __Pyx_GOTREF(__pyx_t_8);
@@ -4417,13 +4422,114 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
       /* "timedcapture/__init__.pyx":150
  *             set_format(self.device, self.format)
  *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
- *             set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)             # <<<<<<<<<<<<<<
+ *             if has_control(self.device, EXT_CID_GAIN_AUTO):             # <<<<<<<<<<<<<<
+ *                 set_control(self.device, EXT_CID_GAIN_AUTO,    EXT_GAIN_MANUAL)
+ *             else:
+ */
+      __pyx_t_8 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_self->device, 0x199E205); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 150, __pyx_L22_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 150, __pyx_L22_error)
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      if (__pyx_t_1) {
+
+        /* "timedcapture/__init__.pyx":151
+ *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
+ *             if has_control(self.device, EXT_CID_GAIN_AUTO):
+ *                 set_control(self.device, EXT_CID_GAIN_AUTO,    EXT_GAIN_MANUAL)             # <<<<<<<<<<<<<<
+ *             else:
+ *                 import sys
+ */
+        __pyx_t_8 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_self->device, 0x199E205, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 151, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_8);
+        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+
+        /* "timedcapture/__init__.pyx":150
+ *             set_format(self.device, self.format)
+ *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
+ *             if has_control(self.device, EXT_CID_GAIN_AUTO):             # <<<<<<<<<<<<<<
+ *                 set_control(self.device, EXT_CID_GAIN_AUTO,    EXT_GAIN_MANUAL)
+ *             else:
+ */
+        goto __pyx_L28;
+      }
+
+      /* "timedcapture/__init__.pyx":153
+ *                 set_control(self.device, EXT_CID_GAIN_AUTO,    EXT_GAIN_MANUAL)
+ *             else:
+ *                 import sys             # <<<<<<<<<<<<<<
+ *                 print(f"***{path}: control 'gain_auto' not found",
+ *                       file=sys.stdout, flush=True)
+ */
+      /*else*/ {
+        __pyx_t_8 = __Pyx_Import(__pyx_n_s_sys, 0, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 153, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_8);
+        __pyx_v_sys = __pyx_t_8;
+        __pyx_t_8 = 0;
+
+        /* "timedcapture/__init__.pyx":154
+ *             else:
+ *                 import sys
+ *                 print(f"***{path}: control 'gain_auto' not found",             # <<<<<<<<<<<<<<
+ *                       file=sys.stdout, flush=True)
+ *         except RuntimeError as e:
+ */
+        __pyx_t_8 = PyTuple_New(3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 154, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_8);
+        __pyx_t_17 = 0;
+        __pyx_t_18 = 127;
+        __Pyx_INCREF(__pyx_kp_u__6);
+        __pyx_t_17 += 3;
+        __Pyx_GIVEREF(__pyx_kp_u__6);
+        PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_kp_u__6);
+        __pyx_t_7 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 154, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_7);
+        __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_7) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_7) : __pyx_t_18;
+        __pyx_t_17 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+        __Pyx_GIVEREF(__pyx_t_7);
+        PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_t_7);
+        __pyx_t_7 = 0;
+        __Pyx_INCREF(__pyx_kp_u_control_gain_auto_not_found);
+        __pyx_t_17 += 31;
+        __Pyx_GIVEREF(__pyx_kp_u_control_gain_auto_not_found);
+        PyTuple_SET_ITEM(__pyx_t_8, 2, __pyx_kp_u_control_gain_auto_not_found);
+        __pyx_t_7 = __Pyx_PyUnicode_Join(__pyx_t_8, 3, __pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 154, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_7);
+        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 154, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_8);
+        __Pyx_GIVEREF(__pyx_t_7);
+        PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_7);
+        __pyx_t_7 = 0;
+
+        /* "timedcapture/__init__.pyx":155
+ *                 import sys
+ *                 print(f"***{path}: control 'gain_auto' not found",
+ *                       file=sys.stdout, flush=True)             # <<<<<<<<<<<<<<
  *         except RuntimeError as e:
  *             ccapture.capture_close(self.device)
  */
-      __pyx_t_8 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_self->device, 0x199E205, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 150, __pyx_L22_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __pyx_t_7 = PyDict_New(); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 155, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_7);
+        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_sys, __pyx_n_s_stdout); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 155, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_5);
+        if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_file, __pyx_t_5) < 0) __PYX_ERR(0, 155, __pyx_L22_error)
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+        if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_flush, Py_True) < 0) __PYX_ERR(0, 155, __pyx_L22_error)
+
+        /* "timedcapture/__init__.pyx":154
+ *             else:
+ *                 import sys
+ *                 print(f"***{path}: control 'gain_auto' not found",             # <<<<<<<<<<<<<<
+ *                       file=sys.stdout, flush=True)
+ *         except RuntimeError as e:
+ */
+        __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_8, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 154, __pyx_L22_error)
+        __Pyx_GOTREF(__pyx_t_5);
+        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      }
+      __pyx_L28:;
 
       /* "timedcapture/__init__.pyx":147
  *         self.format.width  = width
@@ -4439,13 +4545,13 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
     goto __pyx_L27_try_end;
     __pyx_L22_error:;
     __Pyx_PyThreadState_assign
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "timedcapture/__init__.pyx":151
- *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
- *             set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)
+    /* "timedcapture/__init__.pyx":156
+ *                 print(f"***{path}: control 'gain_auto' not found",
+ *                       file=sys.stdout, flush=True)
  *         except RuntimeError as e:             # <<<<<<<<<<<<<<
  *             ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)
@@ -4453,16 +4559,16 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
     __pyx_t_9 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError);
     if (__pyx_t_9) {
       __Pyx_AddTraceback("timedcapture.__init__.Device.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_8, &__pyx_t_7, &__pyx_t_5) < 0) __PYX_ERR(0, 151, __pyx_L24_except_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_GOTREF(__pyx_t_7);
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_7, &__pyx_t_8) < 0) __PYX_ERR(0, 156, __pyx_L24_except_error)
       __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_GOTREF(__pyx_t_8);
       __Pyx_INCREF(__pyx_t_7);
       __pyx_v_e = __pyx_t_7;
       /*try:*/ {
 
-        /* "timedcapture/__init__.pyx":152
- *             set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)
+        /* "timedcapture/__init__.pyx":157
+ *                       file=sys.stdout, flush=True)
  *         except RuntimeError as e:
  *             ccapture.capture_close(self.device)             # <<<<<<<<<<<<<<
  *             ccapture.capture_device_dealloc(self.device)
@@ -4470,7 +4576,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  */
         capture_close(__pyx_v_self->device);
 
-        /* "timedcapture/__init__.pyx":153
+        /* "timedcapture/__init__.pyx":158
  *         except RuntimeError as e:
  *             ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)             # <<<<<<<<<<<<<<
@@ -4479,7 +4585,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  */
         capture_device_dealloc(__pyx_v_self->device);
 
-        /* "timedcapture/__init__.pyx":154
+        /* "timedcapture/__init__.pyx":159
  *             ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)
  *             self.device = NULL             # <<<<<<<<<<<<<<
@@ -4488,7 +4594,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  */
         __pyx_v_self->device = NULL;
 
-        /* "timedcapture/__init__.pyx":155
+        /* "timedcapture/__init__.pyx":160
  *             ccapture.capture_device_dealloc(self.device)
  *             self.device = NULL
  *             ccapture.capture_format_dealloc(self.format)             # <<<<<<<<<<<<<<
@@ -4497,7 +4603,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  */
         capture_format_dealloc(__pyx_v_self->format);
 
-        /* "timedcapture/__init__.pyx":156
+        /* "timedcapture/__init__.pyx":161
  *             self.device = NULL
  *             ccapture.capture_format_dealloc(self.format)
  *             self.format = NULL             # <<<<<<<<<<<<<<
@@ -4506,20 +4612,20 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
  */
         __pyx_v_self->format = NULL;
 
-        /* "timedcapture/__init__.pyx":157
+        /* "timedcapture/__init__.pyx":162
  *             ccapture.capture_format_dealloc(self.format)
  *             self.format = NULL
  *             raise e             # <<<<<<<<<<<<<<
  *         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)
+ *         self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)
  */
         __Pyx_Raise(__pyx_v_e, 0, 0, 0);
-        __PYX_ERR(0, 157, __pyx_L33_error)
+        __PYX_ERR(0, 162, __pyx_L34_error)
       }
 
-      /* "timedcapture/__init__.pyx":151
- *             set_control(self.device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
- *             set_control(self.device, EXT_CID_GAIN_AUTO,        EXT_GAIN_MANUAL)
+      /* "timedcapture/__init__.pyx":156
+ *                 print(f"***{path}: control 'gain_auto' not found",
+ *                       file=sys.stdout, flush=True)
  *         except RuntimeError as e:             # <<<<<<<<<<<<<<
  *             ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)
@@ -4527,7 +4633,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
       /*finally:*/ {
         /*exception exit:*/{
           __Pyx_PyThreadState_declare
-          __pyx_L33_error:;
+          __pyx_L34_error:;
           __pyx_t_16 = 0; __pyx_t_15 = 0; __pyx_t_14 = 0; __pyx_t_13 = 0; __pyx_t_12 = 0; __pyx_t_11 = 0;
           __Pyx_PyThreadState_assign
           if (PY_MAJOR_VERSION >= 3) __Pyx_ExceptionSwap(&__pyx_t_13, &__pyx_t_12, &__pyx_t_11);
@@ -4538,7 +4644,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
           __Pyx_XGOTREF(__pyx_t_13);
           __Pyx_XGOTREF(__pyx_t_12);
           __Pyx_XGOTREF(__pyx_t_11);
-          __pyx_t_9 = __pyx_lineno; __pyx_t_6 = __pyx_clineno; __pyx_t_17 = __pyx_filename;
+          __pyx_t_9 = __pyx_lineno; __pyx_t_6 = __pyx_clineno; __pyx_t_19 = __pyx_filename;
           {
             __Pyx_DECREF(__pyx_v_e);
             __pyx_v_e = NULL;
@@ -4555,7 +4661,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
           __Pyx_XGIVEREF(__pyx_t_14);
           __Pyx_ErrRestore(__pyx_t_16, __pyx_t_15, __pyx_t_14);
           __pyx_t_16 = 0; __pyx_t_15 = 0; __pyx_t_14 = 0; __pyx_t_13 = 0; __pyx_t_12 = 0; __pyx_t_11 = 0;
-          __pyx_lineno = __pyx_t_9; __pyx_clineno = __pyx_t_6; __pyx_filename = __pyx_t_17;
+          __pyx_lineno = __pyx_t_9; __pyx_clineno = __pyx_t_6; __pyx_filename = __pyx_t_19;
           goto __pyx_L24_except_error;
         }
       }
@@ -4579,135 +4685,149 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
     __pyx_L27_try_end:;
   }
 
-  /* "timedcapture/__init__.pyx":158
+  /* "timedcapture/__init__.pyx":163
  *             self.format = NULL
  *             raise e
  *         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')             # <<<<<<<<<<<<<<
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)
+ *         self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)
  *         if self.has_exp_us == False:
  */
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_8 = PyDict_New(); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_18 = PyTuple_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_18);
+  __pyx_t_7 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __pyx_t_5 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_20);
   __Pyx_GIVEREF(__pyx_t_7);
-  PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_5);
+  PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_5);
   __pyx_t_7 = 0;
-  __pyx_t_8 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_shape, __pyx_t_18) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-  __pyx_t_18 = __Pyx_PyInt_FromSize_t((sizeof(__pyx_t_12timedcapture_8__init___uint16))); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_18);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_itemsize, __pyx_t_18) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_format, __pyx_n_u_H) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
-  __pyx_t_18 = __Pyx_PyObject_Call(((PyObject *)__pyx_array_type), __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_18);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_12timedcapture_8__init___uint16(__pyx_t_18);
-  if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+  __pyx_t_5 = 0;
+  if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_shape, __pyx_t_20) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+  __pyx_t_20 = __Pyx_PyInt_FromSize_t((sizeof(__pyx_t_12timedcapture_8__init___uint16))); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_20);
+  if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_itemsize, __pyx_t_20) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+  if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_format, __pyx_n_u_H) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_20 = __Pyx_PyObject_Call(((PyObject *)__pyx_array_type), __pyx_empty_tuple, __pyx_t_8); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_20);
+  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  __pyx_t_21 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_12timedcapture_8__init___uint16(__pyx_t_20);
+  if (unlikely(!__pyx_t_21.memview)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
   __PYX_XDEC_MEMVIEW(&__pyx_v_self->buffer, 0);
-  __pyx_v_self->buffer = __pyx_t_19;
-  __pyx_t_19.memview = NULL;
-  __pyx_t_19.data = NULL;
+  __pyx_v_self->buffer = __pyx_t_21;
+  __pyx_t_21.memview = NULL;
+  __pyx_t_21.data = NULL;
 
-  /* "timedcapture/__init__.pyx":159
+  /* "timedcapture/__init__.pyx":164
  *             raise e
  *         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)             # <<<<<<<<<<<<<<
+ *         self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)             # <<<<<<<<<<<<<<
  *         if self.has_exp_us == False:
  *             import sys
  */
-  __pyx_t_18 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_has_control); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 159, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_18);
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_18, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 159, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-  __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_20 == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_v_self->has_exp_us = __pyx_t_20;
+  __pyx_t_20 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_self->device, 0x199E201); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_20);
+  __pyx_t_22 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_22 == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 164, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+  __pyx_v_self->has_exp_us = __pyx_t_22;
 
-  /* "timedcapture/__init__.pyx":160
+  /* "timedcapture/__init__.pyx":165
  *         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)
+ *         self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)
  *         if self.has_exp_us == False:             # <<<<<<<<<<<<<<
  *             import sys
- *             print(f"***control 'exposure_time_us' not found from {path}",
+ *             print(f"***{path}: control 'exposure_time_us' not found",
  */
   __pyx_t_1 = ((__pyx_v_self->has_exp_us == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "timedcapture/__init__.pyx":161
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)
+    /* "timedcapture/__init__.pyx":166
+ *         self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)
  *         if self.has_exp_us == False:
  *             import sys             # <<<<<<<<<<<<<<
- *             print(f"***control 'exposure_time_us' not found from {path}",
+ *             print(f"***{path}: control 'exposure_time_us' not found",
  *                   file=sys.stdout, flush=True)
  */
-    __pyx_t_5 = __Pyx_Import(__pyx_n_s_sys, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 161, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_v_sys = __pyx_t_5;
-    __pyx_t_5 = 0;
+    __pyx_t_20 = __Pyx_Import(__pyx_n_s_sys, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 166, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_XDECREF_SET(__pyx_v_sys, __pyx_t_20);
+    __pyx_t_20 = 0;
 
-    /* "timedcapture/__init__.pyx":162
+    /* "timedcapture/__init__.pyx":167
  *         if self.has_exp_us == False:
  *             import sys
- *             print(f"***control 'exposure_time_us' not found from {path}",             # <<<<<<<<<<<<<<
+ *             print(f"***{path}: control 'exposure_time_us' not found",             # <<<<<<<<<<<<<<
  *                   file=sys.stdout, flush=True)
  * 
  */
-    __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_18 = __Pyx_PyUnicode_Concat(__pyx_kp_u_control_exposure_time_us_not_fo, __pyx_t_5); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 162, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_18);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_GIVEREF(__pyx_t_18);
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_18);
-    __pyx_t_18 = 0;
+    __pyx_t_20 = PyTuple_New(3); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_17 = 0;
+    __pyx_t_18 = 127;
+    __Pyx_INCREF(__pyx_kp_u__6);
+    __pyx_t_17 += 3;
+    __Pyx_GIVEREF(__pyx_kp_u__6);
+    PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_kp_u__6);
+    __pyx_t_8 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_8) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_8) : __pyx_t_18;
+    __pyx_t_17 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_8);
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_8);
+    __pyx_t_8 = 0;
+    __Pyx_INCREF(__pyx_kp_u_control_exposure_time_us_not_fo);
+    __pyx_t_17 += 38;
+    __Pyx_GIVEREF(__pyx_kp_u_control_exposure_time_us_not_fo);
+    PyTuple_SET_ITEM(__pyx_t_20, 2, __pyx_kp_u_control_exposure_time_us_not_fo);
+    __pyx_t_8 = __Pyx_PyUnicode_Join(__pyx_t_20, 3, __pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    __pyx_t_20 = PyTuple_New(1); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_8);
+    __pyx_t_8 = 0;
 
-    /* "timedcapture/__init__.pyx":163
+    /* "timedcapture/__init__.pyx":168
  *             import sys
- *             print(f"***control 'exposure_time_us' not found from {path}",
+ *             print(f"***{path}: control 'exposure_time_us' not found",
  *                   file=sys.stdout, flush=True)             # <<<<<<<<<<<<<<
  * 
  *     @property
  */
-    __pyx_t_18 = PyDict_New(); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 163, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_18);
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_sys, __pyx_n_s_stdout); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 163, __pyx_L1_error)
+    __pyx_t_8 = PyDict_New(); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    if (PyDict_SetItem(__pyx_t_18, __pyx_n_s_file, __pyx_t_8) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (PyDict_SetItem(__pyx_t_18, __pyx_n_s_flush, Py_True) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_sys, __pyx_n_s_stdout); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 168, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_file, __pyx_t_5) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_flush, Py_True) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
 
-    /* "timedcapture/__init__.pyx":162
+    /* "timedcapture/__init__.pyx":167
  *         if self.has_exp_us == False:
  *             import sys
- *             print(f"***control 'exposure_time_us' not found from {path}",             # <<<<<<<<<<<<<<
+ *             print(f"***{path}: control 'exposure_time_us' not found",             # <<<<<<<<<<<<<<
  *                   file=sys.stdout, flush=True)
  * 
  */
-    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_5, __pyx_t_18); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 162, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_20, __pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "timedcapture/__init__.pyx":160
+    /* "timedcapture/__init__.pyx":165
  *         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)
+ *         self.has_exp_us = has_control(self.device, EXT_CID_EXPOSURE_TIME_US)
  *         if self.has_exp_us == False:             # <<<<<<<<<<<<<<
  *             import sys
- *             print(f"***control 'exposure_time_us' not found from {path}",
+ *             print(f"***{path}: control 'exposure_time_us' not found",
  */
   }
 
@@ -4726,8 +4846,8 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_18);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_19, 1);
+  __Pyx_XDECREF(__pyx_t_20);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_21, 1);
   __Pyx_AddTraceback("timedcapture.__init__.Device.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
@@ -4737,7 +4857,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device___cinit__(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":166
+/* "timedcapture/__init__.pyx":171
  * 
  *     @property
  *     def path(self):             # <<<<<<<<<<<<<<
@@ -4763,7 +4883,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4path___get__(struct 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "timedcapture/__init__.pyx":167
+  /* "timedcapture/__init__.pyx":172
  *     @property
  *     def path(self):
  *         return self.path_str             # <<<<<<<<<<<<<<
@@ -4775,7 +4895,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4path___get__(struct 
   __pyx_r = __pyx_v_self->path_str;
   goto __pyx_L0;
 
-  /* "timedcapture/__init__.pyx":166
+  /* "timedcapture/__init__.pyx":171
  * 
  *     @property
  *     def path(self):             # <<<<<<<<<<<<<<
@@ -4790,7 +4910,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4path___get__(struct 
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":170
+/* "timedcapture/__init__.pyx":175
  * 
  *     @property
  *     def width(self):             # <<<<<<<<<<<<<<
@@ -4817,18 +4937,18 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_5width___get__(struct
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "timedcapture/__init__.pyx":171
+  /* "timedcapture/__init__.pyx":176
  *     @property
  *     def width(self):
  *         get_format(self.device, self.format)             # <<<<<<<<<<<<<<
  *         return self.format.width
  * 
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___get_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___get_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":172
+  /* "timedcapture/__init__.pyx":177
  *     def width(self):
  *         get_format(self.device, self.format)
  *         return self.format.width             # <<<<<<<<<<<<<<
@@ -4836,13 +4956,13 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_5width___get__(struct
  *     @width.setter
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "timedcapture/__init__.pyx":170
+  /* "timedcapture/__init__.pyx":175
  * 
  *     @property
  *     def width(self):             # <<<<<<<<<<<<<<
@@ -4861,7 +4981,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_5width___get__(struct
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":175
+/* "timedcapture/__init__.pyx":180
  * 
  *     @width.setter
  *     def width(self, uint16 width):             # <<<<<<<<<<<<<<
@@ -4877,7 +4997,7 @@ static int __pyx_pw_12timedcapture_8__init___6Device_5width_3__set__(PyObject *_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_width); {
-    __pyx_v_width = __Pyx_PyInt_As_npy_uint16(__pyx_arg_width); if (unlikely((__pyx_v_width == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_width = __Pyx_PyInt_As_npy_uint16(__pyx_arg_width); if (unlikely((__pyx_v_width == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4898,7 +5018,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_5width_2__set__(struct __py
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "timedcapture/__init__.pyx":176
+  /* "timedcapture/__init__.pyx":181
  *     @width.setter
  *     def width(self, uint16 width):
  *         self.format.width = width             # <<<<<<<<<<<<<<
@@ -4907,18 +5027,18 @@ static int __pyx_pf_12timedcapture_8__init___6Device_5width_2__set__(struct __py
  */
   __pyx_v_self->format->width = __pyx_v_width;
 
-  /* "timedcapture/__init__.pyx":177
+  /* "timedcapture/__init__.pyx":182
  *     def width(self, uint16 width):
  *         self.format.width = width
  *         set_format(self.device, self.format)             # <<<<<<<<<<<<<<
  * 
  *     @property
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":175
+  /* "timedcapture/__init__.pyx":180
  * 
  *     @width.setter
  *     def width(self, uint16 width):             # <<<<<<<<<<<<<<
@@ -4938,7 +5058,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_5width_2__set__(struct __py
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":180
+/* "timedcapture/__init__.pyx":185
  * 
  *     @property
  *     def height(self):             # <<<<<<<<<<<<<<
@@ -4965,18 +5085,18 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6height___get__(struc
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "timedcapture/__init__.pyx":181
+  /* "timedcapture/__init__.pyx":186
  *     @property
  *     def height(self):
  *         get_format(self.device, self.format)             # <<<<<<<<<<<<<<
  *         return self.format.height
  * 
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___get_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___get_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":182
+  /* "timedcapture/__init__.pyx":187
  *     def height(self):
  *         get_format(self.device, self.format)
  *         return self.format.height             # <<<<<<<<<<<<<<
@@ -4984,13 +5104,13 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6height___get__(struc
  *     @height.setter
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "timedcapture/__init__.pyx":180
+  /* "timedcapture/__init__.pyx":185
  * 
  *     @property
  *     def height(self):             # <<<<<<<<<<<<<<
@@ -5009,7 +5129,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6height___get__(struc
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":185
+/* "timedcapture/__init__.pyx":190
  * 
  *     @height.setter
  *     def height(self, uint16 height):             # <<<<<<<<<<<<<<
@@ -5025,7 +5145,7 @@ static int __pyx_pw_12timedcapture_8__init___6Device_6height_3__set__(PyObject *
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_height); {
-    __pyx_v_height = __Pyx_PyInt_As_npy_uint16(__pyx_arg_height); if (unlikely((__pyx_v_height == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L3_error)
+    __pyx_v_height = __Pyx_PyInt_As_npy_uint16(__pyx_arg_height); if (unlikely((__pyx_v_height == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5046,7 +5166,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_6height_2__set__(struct __p
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "timedcapture/__init__.pyx":186
+  /* "timedcapture/__init__.pyx":191
  *     @height.setter
  *     def height(self, uint16 height):
  *         self.format.height = height             # <<<<<<<<<<<<<<
@@ -5055,18 +5175,18 @@ static int __pyx_pf_12timedcapture_8__init___6Device_6height_2__set__(struct __p
  */
   __pyx_v_self->format->height = __pyx_v_height;
 
-  /* "timedcapture/__init__.pyx":187
+  /* "timedcapture/__init__.pyx":192
  *     def height(self, uint16 height):
  *         self.format.height = height
  *         set_format(self.device, self.format)             # <<<<<<<<<<<<<<
  * 
  *     @property
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":185
+  /* "timedcapture/__init__.pyx":190
  * 
  *     @height.setter
  *     def height(self, uint16 height):             # <<<<<<<<<<<<<<
@@ -5086,7 +5206,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_6height_2__set__(struct __p
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":190
+/* "timedcapture/__init__.pyx":195
  * 
  *     @property
  *     def size(self):             # <<<<<<<<<<<<<<
@@ -5115,18 +5235,18 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4size___get__(struct 
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "timedcapture/__init__.pyx":191
+  /* "timedcapture/__init__.pyx":196
  *     @property
  *     def size(self):
  *         get_format(self.device, self.format)             # <<<<<<<<<<<<<<
  *         return (self.format.width, self.format.height)
  * 
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___get_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___get_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":192
+  /* "timedcapture/__init__.pyx":197
  *     def size(self):
  *         get_format(self.device, self.format)
  *         return (self.format.width, self.format.height)             # <<<<<<<<<<<<<<
@@ -5134,11 +5254,11 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4size___get__(struct 
  *     @size.setter
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->height); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_npy_uint16(__pyx_v_self->format->height); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -5150,7 +5270,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4size___get__(struct 
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "timedcapture/__init__.pyx":190
+  /* "timedcapture/__init__.pyx":195
  * 
  *     @property
  *     def size(self):             # <<<<<<<<<<<<<<
@@ -5171,7 +5291,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4size___get__(struct 
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":195
+/* "timedcapture/__init__.pyx":200
  * 
  *     @size.setter
  *     def size(self, (uint16, uint16) width_height):             # <<<<<<<<<<<<<<
@@ -5182,12 +5302,12 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4size___get__(struct 
 /* Python wrapper */
 static int __pyx_pw_12timedcapture_8__init___6Device_4size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_width_height); /*proto*/
 static int __pyx_pw_12timedcapture_8__init___6Device_4size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_width_height) {
-  __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_v_width_height;
+  __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_v_width_height;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_width_height); {
-    __pyx_v_width_height = __pyx_convert__from_py___pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc(__pyx_arg_width_height); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 195, __pyx_L3_error)
+    __pyx_v_width_height = __pyx_convert__from_py___pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc(__pyx_arg_width_height); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5195,20 +5315,20 @@ static int __pyx_pw_12timedcapture_8__init___6Device_4size_3__set__(PyObject *__
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self), ((__pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc)__pyx_v_width_height));
+  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self), ((__pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc)__pyx_v_width_height));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_v_width_height) {
+static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_v_width_height) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "timedcapture/__init__.pyx":196
+  /* "timedcapture/__init__.pyx":201
  *     @size.setter
  *     def size(self, (uint16, uint16) width_height):
  *         self.format.width  = width_height[0]             # <<<<<<<<<<<<<<
@@ -5217,7 +5337,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx
  */
   __pyx_v_self->format->width = __pyx_v_width_height.f0;
 
-  /* "timedcapture/__init__.pyx":197
+  /* "timedcapture/__init__.pyx":202
  *     def size(self, (uint16, uint16) width_height):
  *         self.format.width  = width_height[0]
  *         self.format.height = width_height[1]             # <<<<<<<<<<<<<<
@@ -5226,18 +5346,18 @@ static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx
  */
   __pyx_v_self->format->height = __pyx_v_width_height.f1;
 
-  /* "timedcapture/__init__.pyx":198
+  /* "timedcapture/__init__.pyx":203
  *         self.format.width  = width_height[0]
  *         self.format.height = width_height[1]
  *         set_format(self.device, self.format)             # <<<<<<<<<<<<<<
  * 
  *     @property
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_self->device, __pyx_v_self->format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":195
+  /* "timedcapture/__init__.pyx":200
  * 
  *     @size.setter
  *     def size(self, (uint16, uint16) width_height):             # <<<<<<<<<<<<<<
@@ -5257,7 +5377,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_4size_2__set__(struct __pyx
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":201
+/* "timedcapture/__init__.pyx":206
  * 
  *     @property
  *     def exposure_us(self):             # <<<<<<<<<<<<<<
@@ -5285,7 +5405,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "timedcapture/__init__.pyx":202
+  /* "timedcapture/__init__.pyx":207
  *     @property
  *     def exposure_us(self):
  *         if self.has_exp_us == True:             # <<<<<<<<<<<<<<
@@ -5295,7 +5415,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__
   __pyx_t_1 = ((__pyx_v_self->has_exp_us == 1) != 0);
   if (__pyx_t_1) {
 
-    /* "timedcapture/__init__.pyx":203
+    /* "timedcapture/__init__.pyx":208
  *     def exposure_us(self):
  *         if self.has_exp_us == True:
  *             return self.read_control_value(EXT_CID_EXPOSURE_TIME_US, "exposure_us")             # <<<<<<<<<<<<<<
@@ -5303,13 +5423,13 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__
  *             return self.read_control_value(V4L2_CID_EXPOSURE_ABSOLUTE, "exposure_absolute")*V4L2_EXPOSURE_UNIT
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __Pyx_PyInt_From_npy_int32(((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->read_control_value(__pyx_v_self, 0x199E201, __pyx_n_u_exposure_us)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_npy_int32(((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->read_control_value(__pyx_v_self, 0x199E201, __pyx_n_u_exposure_us)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "timedcapture/__init__.pyx":202
+    /* "timedcapture/__init__.pyx":207
  *     @property
  *     def exposure_us(self):
  *         if self.has_exp_us == True:             # <<<<<<<<<<<<<<
@@ -5318,7 +5438,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__
  */
   }
 
-  /* "timedcapture/__init__.pyx":205
+  /* "timedcapture/__init__.pyx":210
  *             return self.read_control_value(EXT_CID_EXPOSURE_TIME_US, "exposure_us")
  *         else:
  *             return self.read_control_value(V4L2_CID_EXPOSURE_ABSOLUTE, "exposure_absolute")*V4L2_EXPOSURE_UNIT             # <<<<<<<<<<<<<<
@@ -5327,14 +5447,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__
  */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __Pyx_PyInt_From_long((((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->read_control_value(__pyx_v_self, 0x9A0902, __pyx_n_u_exposure_absolute) * 10)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_long((((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->read_control_value(__pyx_v_self, 0x9A0902, __pyx_n_u_exposure_absolute) * 10)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
   }
 
-  /* "timedcapture/__init__.pyx":201
+  /* "timedcapture/__init__.pyx":206
  * 
  *     @property
  *     def exposure_us(self):             # <<<<<<<<<<<<<<
@@ -5353,7 +5473,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_11exposure_us___get__
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":208
+/* "timedcapture/__init__.pyx":213
  * 
  *     @exposure_us.setter
  *     def exposure_us(self, int32 exposure_us):             # <<<<<<<<<<<<<<
@@ -5369,7 +5489,7 @@ static int __pyx_pw_12timedcapture_8__init___6Device_11exposure_us_3__set__(PyOb
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_exposure_us); {
-    __pyx_v_exposure_us = __Pyx_PyInt_As_npy_int32(__pyx_arg_exposure_us); if (unlikely((__pyx_v_exposure_us == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L3_error)
+    __pyx_v_exposure_us = __Pyx_PyInt_As_npy_int32(__pyx_arg_exposure_us); if (unlikely((__pyx_v_exposure_us == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5391,7 +5511,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_11exposure_us_2__set__(stru
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "timedcapture/__init__.pyx":209
+  /* "timedcapture/__init__.pyx":214
  *     @exposure_us.setter
  *     def exposure_us(self, int32 exposure_us):
  *         if self.has_exp_us == True:             # <<<<<<<<<<<<<<
@@ -5401,18 +5521,18 @@ static int __pyx_pf_12timedcapture_8__init___6Device_11exposure_us_2__set__(stru
   __pyx_t_1 = ((__pyx_v_self->has_exp_us == 1) != 0);
   if (__pyx_t_1) {
 
-    /* "timedcapture/__init__.pyx":210
+    /* "timedcapture/__init__.pyx":215
  *     def exposure_us(self, int32 exposure_us):
  *         if self.has_exp_us == True:
  *             self.write_control_value(EXT_CID_EXPOSURE_TIME_US, exposure_us, "exposure_us")             # <<<<<<<<<<<<<<
  *         else:
  *             self.write_control_value(V4L2_CID_EXPOSURE_ABSOLUTE, exposure_us // 10, "exposure_absolute")
  */
-    __pyx_t_2 = ((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->write_control_value(__pyx_v_self, 0x199E201, __pyx_v_exposure_us, __pyx_n_u_exposure_us); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->write_control_value(__pyx_v_self, 0x199E201, __pyx_v_exposure_us, __pyx_n_u_exposure_us); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "timedcapture/__init__.pyx":209
+    /* "timedcapture/__init__.pyx":214
  *     @exposure_us.setter
  *     def exposure_us(self, int32 exposure_us):
  *         if self.has_exp_us == True:             # <<<<<<<<<<<<<<
@@ -5422,7 +5542,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_11exposure_us_2__set__(stru
     goto __pyx_L3;
   }
 
-  /* "timedcapture/__init__.pyx":212
+  /* "timedcapture/__init__.pyx":217
  *             self.write_control_value(EXT_CID_EXPOSURE_TIME_US, exposure_us, "exposure_us")
  *         else:
  *             self.write_control_value(V4L2_CID_EXPOSURE_ABSOLUTE, exposure_us // 10, "exposure_absolute")             # <<<<<<<<<<<<<<
@@ -5430,13 +5550,13 @@ static int __pyx_pf_12timedcapture_8__init___6Device_11exposure_us_2__set__(stru
  *     @property
  */
   /*else*/ {
-    __pyx_t_2 = ((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->write_control_value(__pyx_v_self, 0x9A0902, __Pyx_div_long(__pyx_v_exposure_us, 10), __pyx_n_u_exposure_absolute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 212, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->write_control_value(__pyx_v_self, 0x9A0902, __Pyx_div_long(__pyx_v_exposure_us, 10), __pyx_n_u_exposure_absolute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_L3:;
 
-  /* "timedcapture/__init__.pyx":208
+  /* "timedcapture/__init__.pyx":213
  * 
  *     @exposure_us.setter
  *     def exposure_us(self, int32 exposure_us):             # <<<<<<<<<<<<<<
@@ -5456,7 +5576,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_11exposure_us_2__set__(stru
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":215
+/* "timedcapture/__init__.pyx":220
  * 
  *     @property
  *     def gain(self):             # <<<<<<<<<<<<<<
@@ -5483,7 +5603,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4gain___get__(struct 
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "timedcapture/__init__.pyx":216
+  /* "timedcapture/__init__.pyx":221
  *     @property
  *     def gain(self):
  *         return self.read_control_value(V4L2_CID_GAIN, "gain")             # <<<<<<<<<<<<<<
@@ -5491,13 +5611,13 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4gain___get__(struct 
  *     @gain.setter
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_npy_int32(((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->read_control_value(__pyx_v_self, 0x980913, __pyx_n_u_gain)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_int32(((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->read_control_value(__pyx_v_self, 0x980913, __pyx_n_u_gain)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "timedcapture/__init__.pyx":215
+  /* "timedcapture/__init__.pyx":220
  * 
  *     @property
  *     def gain(self):             # <<<<<<<<<<<<<<
@@ -5516,7 +5636,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4gain___get__(struct 
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":219
+/* "timedcapture/__init__.pyx":224
  * 
  *     @gain.setter
  *     def gain(self, int32 gain):             # <<<<<<<<<<<<<<
@@ -5532,7 +5652,7 @@ static int __pyx_pw_12timedcapture_8__init___6Device_4gain_3__set__(PyObject *__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_gain); {
-    __pyx_v_gain = __Pyx_PyInt_As_npy_int32(__pyx_arg_gain); if (unlikely((__pyx_v_gain == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L3_error)
+    __pyx_v_gain = __Pyx_PyInt_As_npy_int32(__pyx_arg_gain); if (unlikely((__pyx_v_gain == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 224, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5553,18 +5673,18 @@ static int __pyx_pf_12timedcapture_8__init___6Device_4gain_2__set__(struct __pyx
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "timedcapture/__init__.pyx":220
+  /* "timedcapture/__init__.pyx":225
  *     @gain.setter
  *     def gain(self, int32 gain):
  *         self.write_control_value(V4L2_CID_GAIN, gain, "gain")             # <<<<<<<<<<<<<<
  * 
  *     cdef int32 read_control_value(self, uint32 cid, str label):
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->write_control_value(__pyx_v_self, 0x980913, __pyx_v_gain, __pyx_n_u_gain); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12timedcapture_8__init___Device *)__pyx_v_self->__pyx_vtab)->write_control_value(__pyx_v_self, 0x980913, __pyx_v_gain, __pyx_n_u_gain); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":219
+  /* "timedcapture/__init__.pyx":224
  * 
  *     @gain.setter
  *     def gain(self, int32 gain):             # <<<<<<<<<<<<<<
@@ -5584,7 +5704,7 @@ static int __pyx_pf_12timedcapture_8__init___6Device_4gain_2__set__(struct __pyx
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":222
+/* "timedcapture/__init__.pyx":227
  *         self.write_control_value(V4L2_CID_GAIN, gain, "gain")
  * 
  *     cdef int32 read_control_value(self, uint32 cid, str label):             # <<<<<<<<<<<<<<
@@ -5600,22 +5720,22 @@ static __pyx_t_12timedcapture_8__init___int32 __pyx_f_12timedcapture_8__init___6
   int __pyx_t_3;
   __Pyx_RefNannySetupContext("read_control_value", 0);
 
-  /* "timedcapture/__init__.pyx":223
+  /* "timedcapture/__init__.pyx":228
  * 
  *     cdef int32 read_control_value(self, uint32 cid, str label):
  *         if has_control(self.device, cid) == True:             # <<<<<<<<<<<<<<
  *             return get_control(self.device, cid)
  *         else:
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_self->device, __pyx_v_cid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_self->device, __pyx_v_cid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "timedcapture/__init__.pyx":224
+    /* "timedcapture/__init__.pyx":229
  *     cdef int32 read_control_value(self, uint32 cid, str label):
  *         if has_control(self.device, cid) == True:
  *             return get_control(self.device, cid)             # <<<<<<<<<<<<<<
@@ -5625,7 +5745,7 @@ static __pyx_t_12timedcapture_8__init___int32 __pyx_f_12timedcapture_8__init___6
     __pyx_r = __pyx_f_12timedcapture_8__init___get_control(__pyx_v_self->device, __pyx_v_cid);
     goto __pyx_L0;
 
-    /* "timedcapture/__init__.pyx":223
+    /* "timedcapture/__init__.pyx":228
  * 
  *     cdef int32 read_control_value(self, uint32 cid, str label):
  *         if has_control(self.device, cid) == True:             # <<<<<<<<<<<<<<
@@ -5634,7 +5754,7 @@ static __pyx_t_12timedcapture_8__init___int32 __pyx_f_12timedcapture_8__init___6
  */
   }
 
-  /* "timedcapture/__init__.pyx":226
+  /* "timedcapture/__init__.pyx":231
  *             return get_control(self.device, cid)
  *         else:
  *             raise AttributeError(f"device does not have control: {label}")             # <<<<<<<<<<<<<<
@@ -5642,25 +5762,25 @@ static __pyx_t_12timedcapture_8__init___int32 __pyx_f_12timedcapture_8__init___6
  *     cdef write_control_value(self, uint32 cid, int32 value, str label):
  */
   /*else*/ {
-    __pyx_t_2 = __Pyx_PyObject_FormatSimple(__pyx_v_label, __pyx_empty_unicode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_FormatSimple(__pyx_v_label, __pyx_empty_unicode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_device_does_not_have_control, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_device_does_not_have_control, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 231, __pyx_L1_error)
   }
 
-  /* "timedcapture/__init__.pyx":222
+  /* "timedcapture/__init__.pyx":227
  *         self.write_control_value(V4L2_CID_GAIN, gain, "gain")
  * 
  *     cdef int32 read_control_value(self, uint32 cid, str label):             # <<<<<<<<<<<<<<
@@ -5679,7 +5799,7 @@ static __pyx_t_12timedcapture_8__init___int32 __pyx_f_12timedcapture_8__init___6
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":228
+/* "timedcapture/__init__.pyx":233
  *             raise AttributeError(f"device does not have control: {label}")
  * 
  *     cdef write_control_value(self, uint32 cid, int32 value, str label):             # <<<<<<<<<<<<<<
@@ -5695,33 +5815,33 @@ static PyObject *__pyx_f_12timedcapture_8__init___6Device_write_control_value(st
   int __pyx_t_3;
   __Pyx_RefNannySetupContext("write_control_value", 0);
 
-  /* "timedcapture/__init__.pyx":229
+  /* "timedcapture/__init__.pyx":234
  * 
  *     cdef write_control_value(self, uint32 cid, int32 value, str label):
  *         if has_control(self.device, cid) == True:             # <<<<<<<<<<<<<<
  *             set_control(self.device, cid, value)
  *         else:
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_self->device, __pyx_v_cid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_self->device, __pyx_v_cid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 234, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "timedcapture/__init__.pyx":230
+    /* "timedcapture/__init__.pyx":235
  *     cdef write_control_value(self, uint32 cid, int32 value, str label):
  *         if has_control(self.device, cid) == True:
  *             set_control(self.device, cid, value)             # <<<<<<<<<<<<<<
  *         else:
  *             raise AttributeError(f"cannot control: {label}")
  */
-    __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_self->device, __pyx_v_cid, __pyx_v_value); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 230, __pyx_L1_error)
+    __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_self->device, __pyx_v_cid, __pyx_v_value); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "timedcapture/__init__.pyx":229
+    /* "timedcapture/__init__.pyx":234
  * 
  *     cdef write_control_value(self, uint32 cid, int32 value, str label):
  *         if has_control(self.device, cid) == True:             # <<<<<<<<<<<<<<
@@ -5731,7 +5851,7 @@ static PyObject *__pyx_f_12timedcapture_8__init___6Device_write_control_value(st
     goto __pyx_L3;
   }
 
-  /* "timedcapture/__init__.pyx":232
+  /* "timedcapture/__init__.pyx":237
  *             set_control(self.device, cid, value)
  *         else:
  *             raise AttributeError(f"cannot control: {label}")             # <<<<<<<<<<<<<<
@@ -5739,26 +5859,26 @@ static PyObject *__pyx_f_12timedcapture_8__init___6Device_write_control_value(st
  *     def start_capture(self):
  */
   /*else*/ {
-    __pyx_t_2 = __Pyx_PyObject_FormatSimple(__pyx_v_label, __pyx_empty_unicode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_FormatSimple(__pyx_v_label, __pyx_empty_unicode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_cannot_control, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_cannot_control, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 232, __pyx_L1_error)
+    __PYX_ERR(0, 237, __pyx_L1_error)
   }
   __pyx_L3:;
 
-  /* "timedcapture/__init__.pyx":228
+  /* "timedcapture/__init__.pyx":233
  *             raise AttributeError(f"device does not have control: {label}")
  * 
  *     cdef write_control_value(self, uint32 cid, int32 value, str label):             # <<<<<<<<<<<<<<
@@ -5780,7 +5900,7 @@ static PyObject *__pyx_f_12timedcapture_8__init___6Device_write_control_value(st
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":234
+/* "timedcapture/__init__.pyx":239
  *             raise AttributeError(f"cannot control: {label}")
  * 
  *     def start_capture(self):             # <<<<<<<<<<<<<<
@@ -5808,21 +5928,21 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_2start_capture(struct
   struct __pyx_opt_args_12timedcapture_8__init___start_capture __pyx_t_2;
   __Pyx_RefNannySetupContext("start_capture", 0);
 
-  /* "timedcapture/__init__.pyx":235
+  /* "timedcapture/__init__.pyx":240
  * 
  *     def start_capture(self):
  *         start_capture(self.device, self.buffer)             # <<<<<<<<<<<<<<
  * 
  *     def read_frame(self, bool_t read_unbuffered=False, bool_t copy=False):
  */
-  if (unlikely(!__pyx_v_self->buffer.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 235, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->buffer.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 240, __pyx_L1_error)}
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.buffer = __pyx_v_self->buffer;
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___start_capture(__pyx_v_self->device, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___start_capture(__pyx_v_self->device, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":234
+  /* "timedcapture/__init__.pyx":239
  *             raise AttributeError(f"cannot control: {label}")
  * 
  *     def start_capture(self):             # <<<<<<<<<<<<<<
@@ -5843,7 +5963,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_2start_capture(struct
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":237
+/* "timedcapture/__init__.pyx":242
  *         start_capture(self.device, self.buffer)
  * 
  *     def read_frame(self, bool_t read_unbuffered=False, bool_t copy=False):             # <<<<<<<<<<<<<<
@@ -5888,7 +6008,7 @@ static PyObject *__pyx_pw_12timedcapture_8__init___6Device_5read_frame(PyObject 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "read_frame") < 0)) __PYX_ERR(0, 237, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "read_frame") < 0)) __PYX_ERR(0, 242, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -5901,19 +6021,19 @@ static PyObject *__pyx_pw_12timedcapture_8__init___6Device_5read_frame(PyObject 
       }
     }
     if (values[0]) {
-      __pyx_v_read_unbuffered = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_read_unbuffered == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 237, __pyx_L3_error)
+      __pyx_v_read_unbuffered = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_read_unbuffered == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
     } else {
       __pyx_v_read_unbuffered = ((bool)0);
     }
     if (values[1]) {
-      __pyx_v_copy = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_copy == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 237, __pyx_L3_error)
+      __pyx_v_copy = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_copy == ((bool)-1)) && PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
     } else {
       __pyx_v_copy = ((bool)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("read_frame", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 237, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("read_frame", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 242, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("timedcapture.__init__.Device.read_frame", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5936,7 +6056,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4read_frame(struct __
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("read_frame", 0);
 
-  /* "timedcapture/__init__.pyx":238
+  /* "timedcapture/__init__.pyx":243
  * 
  *     def read_frame(self, bool_t read_unbuffered=False, bool_t copy=False):
  *         read_frame(self.device, read_unbuffered)             # <<<<<<<<<<<<<<
@@ -5945,11 +6065,11 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4read_frame(struct __
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.read_unbuffered = __pyx_v_read_unbuffered;
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___read_frame(__pyx_v_self->device, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___read_frame(__pyx_v_self->device, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":239
+  /* "timedcapture/__init__.pyx":244
  *     def read_frame(self, bool_t read_unbuffered=False, bool_t copy=False):
  *         read_frame(self.device, read_unbuffered)
  *         return np.array(self.buffer, copy=copy)             # <<<<<<<<<<<<<<
@@ -5957,26 +6077,26 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4read_frame(struct __
  *     def stop_capture(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_v_self->buffer.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 239, __pyx_L1_error)}
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->buffer, 2, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_12timedcapture_8__init___uint16, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_12timedcapture_8__init___uint16, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  if (unlikely(!__pyx_v_self->buffer.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 244, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->buffer, 2, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_12timedcapture_8__init___uint16, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_12timedcapture_8__init___uint16, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_copy, __pyx_t_5) < 0) __PYX_ERR(0, 239, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_copy, __pyx_t_5) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -5985,7 +6105,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4read_frame(struct __
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "timedcapture/__init__.pyx":237
+  /* "timedcapture/__init__.pyx":242
  *         start_capture(self.device, self.buffer)
  * 
  *     def read_frame(self, bool_t read_unbuffered=False, bool_t copy=False):             # <<<<<<<<<<<<<<
@@ -6007,7 +6127,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_4read_frame(struct __
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":241
+/* "timedcapture/__init__.pyx":246
  *         return np.array(self.buffer, copy=copy)
  * 
  *     def stop_capture(self):             # <<<<<<<<<<<<<<
@@ -6034,18 +6154,18 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6stop_capture(struct 
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("stop_capture", 0);
 
-  /* "timedcapture/__init__.pyx":242
+  /* "timedcapture/__init__.pyx":247
  * 
  *     def stop_capture(self):
  *         stop_capture(self.device)             # <<<<<<<<<<<<<<
  * 
- *     def __dealloc__(self):
+ *     def close(self):
  */
-  __pyx_t_1 = __pyx_f_12timedcapture_8__init___stop_capture(__pyx_v_self->device); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12timedcapture_8__init___stop_capture(__pyx_v_self->device); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":241
+  /* "timedcapture/__init__.pyx":246
  *         return np.array(self.buffer, copy=copy)
  * 
  *     def stop_capture(self):             # <<<<<<<<<<<<<<
@@ -6066,33 +6186,36 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_6stop_capture(struct 
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":244
+/* "timedcapture/__init__.pyx":249
  *         stop_capture(self.device)
  * 
- *     def __dealloc__(self):             # <<<<<<<<<<<<<<
+ *     def close(self):             # <<<<<<<<<<<<<<
  *         if self.device is not NULL:
  *             if ccapture.capture_is_open(self.device) == True:
  */
 
 /* Python wrapper */
-static void __pyx_pw_12timedcapture_8__init___6Device_9__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_12timedcapture_8__init___6Device_9__dealloc__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_12timedcapture_8__init___6Device_9close(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_12timedcapture_8__init___6Device_9close(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
-  __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("close (wrapper)", 0);
+  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_8close(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
+  return __pyx_r;
 }
 
-static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self) {
+static PyObject *__pyx_pf_12timedcapture_8__init___6Device_8close(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
-  __Pyx_RefNannySetupContext("__dealloc__", 0);
+  __Pyx_RefNannySetupContext("close", 0);
 
-  /* "timedcapture/__init__.pyx":245
+  /* "timedcapture/__init__.pyx":250
  * 
- *     def __dealloc__(self):
+ *     def close(self):
  *         if self.device is not NULL:             # <<<<<<<<<<<<<<
  *             if ccapture.capture_is_open(self.device) == True:
  *                 if ccapture.capture_is_running(self.device) == True:
@@ -6100,8 +6223,8 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
   __pyx_t_1 = ((__pyx_v_self->device != NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "timedcapture/__init__.pyx":246
- *     def __dealloc__(self):
+    /* "timedcapture/__init__.pyx":251
+ *     def close(self):
  *         if self.device is not NULL:
  *             if ccapture.capture_is_open(self.device) == True:             # <<<<<<<<<<<<<<
  *                 if ccapture.capture_is_running(self.device) == True:
@@ -6110,7 +6233,7 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
     __pyx_t_1 = ((capture_is_open(__pyx_v_self->device) == 1) != 0);
     if (__pyx_t_1) {
 
-      /* "timedcapture/__init__.pyx":247
+      /* "timedcapture/__init__.pyx":252
  *         if self.device is not NULL:
  *             if ccapture.capture_is_open(self.device) == True:
  *                 if ccapture.capture_is_running(self.device) == True:             # <<<<<<<<<<<<<<
@@ -6120,7 +6243,7 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
       __pyx_t_1 = ((capture_is_running(__pyx_v_self->device) == 1) != 0);
       if (__pyx_t_1) {
 
-        /* "timedcapture/__init__.pyx":248
+        /* "timedcapture/__init__.pyx":253
  *             if ccapture.capture_is_open(self.device) == True:
  *                 if ccapture.capture_is_running(self.device) == True:
  *                     ccapture.capture_stop(self.device)             # <<<<<<<<<<<<<<
@@ -6129,7 +6252,7 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
         capture_stop(__pyx_v_self->device);
 
-        /* "timedcapture/__init__.pyx":247
+        /* "timedcapture/__init__.pyx":252
  *         if self.device is not NULL:
  *             if ccapture.capture_is_open(self.device) == True:
  *                 if ccapture.capture_is_running(self.device) == True:             # <<<<<<<<<<<<<<
@@ -6138,7 +6261,7 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
       }
 
-      /* "timedcapture/__init__.pyx":249
+      /* "timedcapture/__init__.pyx":254
  *                 if ccapture.capture_is_running(self.device) == True:
  *                     ccapture.capture_stop(self.device)
  *                 ccapture.capture_close(self.device)             # <<<<<<<<<<<<<<
@@ -6147,8 +6270,8 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
       capture_close(__pyx_v_self->device);
 
-      /* "timedcapture/__init__.pyx":246
- *     def __dealloc__(self):
+      /* "timedcapture/__init__.pyx":251
+ *     def close(self):
  *         if self.device is not NULL:
  *             if ccapture.capture_is_open(self.device) == True:             # <<<<<<<<<<<<<<
  *                 if ccapture.capture_is_running(self.device) == True:
@@ -6156,7 +6279,7 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
     }
 
-    /* "timedcapture/__init__.pyx":250
+    /* "timedcapture/__init__.pyx":255
  *                     ccapture.capture_stop(self.device)
  *                 ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)             # <<<<<<<<<<<<<<
@@ -6165,16 +6288,16 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
     capture_device_dealloc(__pyx_v_self->device);
 
-    /* "timedcapture/__init__.pyx":245
+    /* "timedcapture/__init__.pyx":250
  * 
- *     def __dealloc__(self):
+ *     def close(self):
  *         if self.device is not NULL:             # <<<<<<<<<<<<<<
  *             if ccapture.capture_is_open(self.device) == True:
  *                 if ccapture.capture_is_running(self.device) == True:
  */
   }
 
-  /* "timedcapture/__init__.pyx":251
+  /* "timedcapture/__init__.pyx":256
  *                 ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)
  *         if self.format is not NULL:             # <<<<<<<<<<<<<<
@@ -6184,16 +6307,16 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
   __pyx_t_1 = ((__pyx_v_self->format != NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "timedcapture/__init__.pyx":252
+    /* "timedcapture/__init__.pyx":257
  *             ccapture.capture_device_dealloc(self.device)
  *         if self.format is not NULL:
  *             ccapture.capture_format_dealloc(self.format)             # <<<<<<<<<<<<<<
  * 
- * def test_calls(path="/dev/video0",
+ *     def __dealloc__(self):
  */
     capture_format_dealloc(__pyx_v_self->format);
 
-    /* "timedcapture/__init__.pyx":251
+    /* "timedcapture/__init__.pyx":256
  *                 ccapture.capture_close(self.device)
  *             ccapture.capture_device_dealloc(self.device)
  *         if self.format is not NULL:             # <<<<<<<<<<<<<<
@@ -6202,15 +6325,92 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
   }
 
-  /* "timedcapture/__init__.pyx":244
+  /* "timedcapture/__init__.pyx":249
  *         stop_capture(self.device)
  * 
- *     def __dealloc__(self):             # <<<<<<<<<<<<<<
+ *     def close(self):             # <<<<<<<<<<<<<<
  *         if self.device is not NULL:
  *             if ccapture.capture_is_open(self.device) == True:
  */
 
   /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "timedcapture/__init__.pyx":259
+ *             ccapture.capture_format_dealloc(self.format)
+ * 
+ *     def __dealloc__(self):             # <<<<<<<<<<<<<<
+ *         self.close()
+ * 
+ */
+
+/* Python wrapper */
+static void __pyx_pw_12timedcapture_8__init___6Device_11__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_12timedcapture_8__init___6Device_11__dealloc__(PyObject *__pyx_v_self) {
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
+  __pyx_pf_12timedcapture_8__init___6Device_10__dealloc__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+}
+
+static void __pyx_pf_12timedcapture_8__init___6Device_10__dealloc__(struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self) {
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  __Pyx_RefNannySetupContext("__dealloc__", 0);
+
+  /* "timedcapture/__init__.pyx":260
+ * 
+ *     def __dealloc__(self):
+ *         self.close()             # <<<<<<<<<<<<<<
+ * 
+ * def test_calls(path="/dev/video0",
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_close); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "timedcapture/__init__.pyx":259
+ *             ccapture.capture_format_dealloc(self.format)
+ * 
+ *     def __dealloc__(self):             # <<<<<<<<<<<<<<
+ *         self.close()
+ * 
+ */
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_WriteUnraisable("timedcapture.__init__.Device.__dealloc__", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __pyx_L0:;
   __Pyx_RefNannyFinishContext();
 }
 
@@ -6221,19 +6421,19 @@ static void __pyx_pf_12timedcapture_8__init___6Device_8__dealloc__(struct __pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12timedcapture_8__init___6Device_11__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_12timedcapture_8__init___6Device_11__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12timedcapture_8__init___6Device_13__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_12timedcapture_8__init___6Device_13__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_10__reduce_cython__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_12__reduce_cython__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12timedcapture_8__init___6Device_10__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self) {
+static PyObject *__pyx_pf_12timedcapture_8__init___6Device_12__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6275,19 +6475,19 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_10__reduce_cython__(C
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12timedcapture_8__init___6Device_13__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_12timedcapture_8__init___6Device_13__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_12timedcapture_8__init___6Device_15__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_12timedcapture_8__init___6Device_15__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_12__setstate_cython__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_12timedcapture_8__init___6Device_14__setstate_cython__(((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12timedcapture_8__init___6Device_12__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12timedcapture_8__init___6Device_14__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_12timedcapture_8__init___Device *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6321,8 +6521,8 @@ static PyObject *__pyx_pf_12timedcapture_8__init___6Device_12__setstate_cython__
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":254
- *             ccapture.capture_format_dealloc(self.format)
+/* "timedcapture/__init__.pyx":262
+ *         self.close()
  * 
  * def test_calls(path="/dev/video0",             # <<<<<<<<<<<<<<
  *                uint16 width=640,
@@ -6396,7 +6596,7 @@ static PyObject *__pyx_pw_12timedcapture_8__init___3test_calls(PyObject *__pyx_s
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "test_calls") < 0)) __PYX_ERR(0, 254, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "test_calls") < 0)) __PYX_ERR(0, 262, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6416,29 +6616,29 @@ static PyObject *__pyx_pw_12timedcapture_8__init___3test_calls(PyObject *__pyx_s
     }
     __pyx_v_path = values[0];
     if (values[1]) {
-      __pyx_v_width = __Pyx_PyInt_As_npy_uint16(values[1]); if (unlikely((__pyx_v_width == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 255, __pyx_L3_error)
+      __pyx_v_width = __Pyx_PyInt_As_npy_uint16(values[1]); if (unlikely((__pyx_v_width == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 263, __pyx_L3_error)
     } else {
       __pyx_v_width = ((__pyx_t_12timedcapture_8__init___uint16)0x280);
     }
     if (values[2]) {
-      __pyx_v_height = __Pyx_PyInt_As_npy_uint16(values[2]); if (unlikely((__pyx_v_height == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 256, __pyx_L3_error)
+      __pyx_v_height = __Pyx_PyInt_As_npy_uint16(values[2]); if (unlikely((__pyx_v_height == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 264, __pyx_L3_error)
     } else {
       __pyx_v_height = ((__pyx_t_12timedcapture_8__init___uint16)0x1E0);
     }
     if (values[3]) {
-      __pyx_v_exposure_us = __Pyx_PyInt_As_npy_int32(values[3]); if (unlikely((__pyx_v_exposure_us == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 257, __pyx_L3_error)
+      __pyx_v_exposure_us = __Pyx_PyInt_As_npy_int32(values[3]); if (unlikely((__pyx_v_exposure_us == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 265, __pyx_L3_error)
     } else {
       __pyx_v_exposure_us = ((__pyx_t_12timedcapture_8__init___int32)0x1388);
     }
     if (values[4]) {
-      __pyx_v_gain = __Pyx_PyInt_As_npy_int32(values[4]); if (unlikely((__pyx_v_gain == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 258, __pyx_L3_error)
+      __pyx_v_gain = __Pyx_PyInt_As_npy_int32(values[4]); if (unlikely((__pyx_v_gain == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 266, __pyx_L3_error)
     } else {
       __pyx_v_gain = ((__pyx_t_12timedcapture_8__init___int32)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("test_calls", 0, 0, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 254, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("test_calls", 0, 0, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 262, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("timedcapture.__init__.test_calls", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6488,55 +6688,55 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
   PyObject *__pyx_t_23 = NULL;
   __Pyx_RefNannySetupContext("test_calls", 0);
 
-  /* "timedcapture/__init__.pyx":260
+  /* "timedcapture/__init__.pyx":268
  *                int32 gain=0):
  *     """test running a device"""
  *     import imageio             # <<<<<<<<<<<<<<
  *     from pathlib import Path
  *     log("---test_calls---")
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_imageio, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_imageio, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_imageio = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":261
+  /* "timedcapture/__init__.pyx":269
  *     """test running a device"""
  *     import imageio
  *     from pathlib import Path             # <<<<<<<<<<<<<<
  *     log("---test_calls---")
  *     device = ccapture.capture_device_init()
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_Path);
   __Pyx_GIVEREF(__pyx_n_s_Path);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Path);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pathlib, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pathlib, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_t_1);
   __pyx_v_Path = __pyx_t_1;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":262
+  /* "timedcapture/__init__.pyx":270
  *     import imageio
  *     from pathlib import Path
  *     log("---test_calls---")             # <<<<<<<<<<<<<<
  *     device = ccapture.capture_device_init()
  *     if device == NULL:
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":263
+  /* "timedcapture/__init__.pyx":271
  *     from pathlib import Path
  *     log("---test_calls---")
  *     device = ccapture.capture_device_init()             # <<<<<<<<<<<<<<
@@ -6545,7 +6745,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
   __pyx_v_device = capture_device_init();
 
-  /* "timedcapture/__init__.pyx":264
+  /* "timedcapture/__init__.pyx":272
  *     log("---test_calls---")
  *     device = ccapture.capture_device_init()
  *     if device == NULL:             # <<<<<<<<<<<<<<
@@ -6555,16 +6755,16 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
   __pyx_t_3 = ((__pyx_v_device == NULL) != 0);
   if (__pyx_t_3) {
 
-    /* "timedcapture/__init__.pyx":265
+    /* "timedcapture/__init__.pyx":273
  *     device = ccapture.capture_device_init()
  *     if device == NULL:
  *         raise MemoryError()             # <<<<<<<<<<<<<<
  *     format = ccapture.capture_format_init()
  *     if format == NULL:
  */
-    PyErr_NoMemory(); __PYX_ERR(0, 265, __pyx_L1_error)
+    PyErr_NoMemory(); __PYX_ERR(0, 273, __pyx_L1_error)
 
-    /* "timedcapture/__init__.pyx":264
+    /* "timedcapture/__init__.pyx":272
  *     log("---test_calls---")
  *     device = ccapture.capture_device_init()
  *     if device == NULL:             # <<<<<<<<<<<<<<
@@ -6573,7 +6773,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
   }
 
-  /* "timedcapture/__init__.pyx":266
+  /* "timedcapture/__init__.pyx":274
  *     if device == NULL:
  *         raise MemoryError()
  *     format = ccapture.capture_format_init()             # <<<<<<<<<<<<<<
@@ -6582,7 +6782,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
   __pyx_v_format = capture_format_init();
 
-  /* "timedcapture/__init__.pyx":267
+  /* "timedcapture/__init__.pyx":275
  *         raise MemoryError()
  *     format = ccapture.capture_format_init()
  *     if format == NULL:             # <<<<<<<<<<<<<<
@@ -6592,7 +6792,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
   __pyx_t_3 = ((__pyx_v_format == NULL) != 0);
   if (__pyx_t_3) {
 
-    /* "timedcapture/__init__.pyx":268
+    /* "timedcapture/__init__.pyx":276
  *     format = ccapture.capture_format_init()
  *     if format == NULL:
  *         ccapture.capture_device_dealloc(device)             # <<<<<<<<<<<<<<
@@ -6601,16 +6801,16 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     capture_device_dealloc(__pyx_v_device);
 
-    /* "timedcapture/__init__.pyx":269
+    /* "timedcapture/__init__.pyx":277
  *     if format == NULL:
  *         ccapture.capture_device_dealloc(device)
  *         raise MemoryError()             # <<<<<<<<<<<<<<
  * 
  *     # open
  */
-    PyErr_NoMemory(); __PYX_ERR(0, 269, __pyx_L1_error)
+    PyErr_NoMemory(); __PYX_ERR(0, 277, __pyx_L1_error)
 
-    /* "timedcapture/__init__.pyx":267
+    /* "timedcapture/__init__.pyx":275
  *         raise MemoryError()
  *     format = ccapture.capture_format_init()
  *     if format == NULL:             # <<<<<<<<<<<<<<
@@ -6619,14 +6819,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
   }
 
-  /* "timedcapture/__init__.pyx":272
+  /* "timedcapture/__init__.pyx":280
  * 
  *     # open
  *     cdef bytes bpath     = path.encode()             # <<<<<<<<<<<<<<
  *     cdef char* path_cstr = <char*>bpath
  *     if ccapture.capture_open(device, bpath) != 0:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_path, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_path, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6639,51 +6839,51 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     }
   }
   if (__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 272, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 272, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 272, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 280, __pyx_L1_error)
   __pyx_v_bpath = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":273
+  /* "timedcapture/__init__.pyx":281
  *     # open
  *     cdef bytes bpath     = path.encode()
  *     cdef char* path_cstr = <char*>bpath             # <<<<<<<<<<<<<<
  *     if ccapture.capture_open(device, bpath) != 0:
  *         cause = format_error_message(device)
  */
-  __pyx_t_5 = __Pyx_PyObject_AsWritableString(__pyx_v_bpath); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_AsWritableString(__pyx_v_bpath); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
   __pyx_v_path_cstr = ((char *)__pyx_t_5);
 
-  /* "timedcapture/__init__.pyx":274
+  /* "timedcapture/__init__.pyx":282
  *     cdef bytes bpath     = path.encode()
  *     cdef char* path_cstr = <char*>bpath
  *     if ccapture.capture_open(device, bpath) != 0:             # <<<<<<<<<<<<<<
  *         cause = format_error_message(device)
  *         ccapture.capture_format_dealloc(format)
  */
-  __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_bpath); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 274, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_AsString(__pyx_v_bpath); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 282, __pyx_L1_error)
   __pyx_t_3 = ((capture_open(__pyx_v_device, __pyx_t_6) != 0) != 0);
   if (__pyx_t_3) {
 
-    /* "timedcapture/__init__.pyx":275
+    /* "timedcapture/__init__.pyx":283
  *     cdef char* path_cstr = <char*>bpath
  *     if ccapture.capture_open(device, bpath) != 0:
  *         cause = format_error_message(device)             # <<<<<<<<<<<<<<
  *         ccapture.capture_format_dealloc(format)
  *         ccapture.capture_device_dealloc(device)
  */
-    __pyx_t_1 = __pyx_f_12timedcapture_8__init___format_error_message(__pyx_v_device); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_12timedcapture_8__init___format_error_message(__pyx_v_device); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_cause = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "timedcapture/__init__.pyx":276
+    /* "timedcapture/__init__.pyx":284
  *     if ccapture.capture_open(device, bpath) != 0:
  *         cause = format_error_message(device)
  *         ccapture.capture_format_dealloc(format)             # <<<<<<<<<<<<<<
@@ -6692,7 +6892,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     capture_format_dealloc(__pyx_v_format);
 
-    /* "timedcapture/__init__.pyx":277
+    /* "timedcapture/__init__.pyx":285
  *         cause = format_error_message(device)
  *         ccapture.capture_format_dealloc(format)
  *         ccapture.capture_device_dealloc(device)             # <<<<<<<<<<<<<<
@@ -6701,16 +6901,16 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     capture_device_dealloc(__pyx_v_device);
 
-    /* "timedcapture/__init__.pyx":278
+    /* "timedcapture/__init__.pyx":286
  *         ccapture.capture_format_dealloc(format)
  *         ccapture.capture_device_dealloc(device)
  *         log(f"***failed to open: {path} ({cause})")             # <<<<<<<<<<<<<<
  *     log(f"[INFO] opened: {path}")
  * 
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = PyTuple_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -6718,7 +6918,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __pyx_t_7 += 19;
     __Pyx_GIVEREF(__pyx_kp_u_failed_to_open);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_kp_u_failed_to_open);
-    __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_9) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_9) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_9);
@@ -6729,7 +6929,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __pyx_t_7 += 2;
     __Pyx_GIVEREF(__pyx_kp_u__10);
     PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_kp_u__10);
-    __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_v_cause, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_v_cause, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_9) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_9) : __pyx_t_8;
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_9);
@@ -6740,7 +6940,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __pyx_t_7 += 1;
     __Pyx_GIVEREF(__pyx_kp_u__2);
     PyTuple_SET_ITEM(__pyx_t_4, 4, __pyx_kp_u__2);
-    __pyx_t_9 = __Pyx_PyUnicode_Join(__pyx_t_4, 5, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyUnicode_Join(__pyx_t_4, 5, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -6754,14 +6954,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       }
     }
     if (!__pyx_t_4) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_9};
-        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -6770,20 +6970,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_9};
-        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       } else
       #endif
       {
-        __pyx_t_10 = PyTuple_New(1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 278, __pyx_L1_error)
+        __pyx_t_10 = PyTuple_New(1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 286, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_4); __pyx_t_4 = NULL;
         __Pyx_GIVEREF(__pyx_t_9);
         PyTuple_SET_ITEM(__pyx_t_10, 0+1, __pyx_t_9);
         __pyx_t_9 = 0;
-        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       }
@@ -6791,7 +6991,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "timedcapture/__init__.pyx":274
+    /* "timedcapture/__init__.pyx":282
  *     cdef bytes bpath     = path.encode()
  *     cdef char* path_cstr = <char*>bpath
  *     if ccapture.capture_open(device, bpath) != 0:             # <<<<<<<<<<<<<<
@@ -6800,18 +7000,18 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
   }
 
-  /* "timedcapture/__init__.pyx":279
+  /* "timedcapture/__init__.pyx":287
  *         ccapture.capture_device_dealloc(device)
  *         log(f"***failed to open: {path} ({cause})")
  *     log(f"[INFO] opened: {path}")             # <<<<<<<<<<<<<<
  * 
  *     try:
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_9 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_opened, __pyx_t_10); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_opened, __pyx_t_10); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __pyx_t_10 = NULL;
@@ -6825,14 +7025,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     }
   }
   if (!__pyx_t_10) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_10, __pyx_t_9};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -6841,20 +7041,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_10, __pyx_t_9};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 287, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_10); __pyx_t_10 = NULL;
       __Pyx_GIVEREF(__pyx_t_9);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_9);
       __pyx_t_9 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -6862,7 +7062,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":281
+  /* "timedcapture/__init__.pyx":289
  *     log(f"[INFO] opened: {path}")
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -6871,7 +7071,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
   /*try:*/ {
 
-    /* "timedcapture/__init__.pyx":283
+    /* "timedcapture/__init__.pyx":291
  *     try:
  *         # configure width/height
  *         format.width  = width             # <<<<<<<<<<<<<<
@@ -6880,7 +7080,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     __pyx_v_format->width = __pyx_v_width;
 
-    /* "timedcapture/__init__.pyx":284
+    /* "timedcapture/__init__.pyx":292
  *         # configure width/height
  *         format.width  = width
  *         format.height = height             # <<<<<<<<<<<<<<
@@ -6889,27 +7089,27 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     __pyx_v_format->height = __pyx_v_height;
 
-    /* "timedcapture/__init__.pyx":285
+    /* "timedcapture/__init__.pyx":293
  *         format.width  = width
  *         format.height = height
  *         set_format(device, format)             # <<<<<<<<<<<<<<
  *         log(f"[INFO] width<-{width}, height<-{height}")
  * 
  */
-    __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_device, __pyx_v_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L7_error)
+    __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_format(__pyx_v_device, __pyx_v_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "timedcapture/__init__.pyx":286
+    /* "timedcapture/__init__.pyx":294
  *         format.height = height
  *         set_format(device, format)
  *         log(f"[INFO] width<-{width}, height<-{height}")             # <<<<<<<<<<<<<<
  * 
  *         # configure exposure
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = PyTuple_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_4 = PyTuple_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -6917,9 +7117,9 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __pyx_t_7 += 14;
     __Pyx_GIVEREF(__pyx_kp_u_INFO_width);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_kp_u_INFO_width);
-    __pyx_t_9 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_9 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_9, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_9, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) : __pyx_t_8;
@@ -6931,9 +7131,9 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __pyx_t_7 += 10;
     __Pyx_GIVEREF(__pyx_kp_u_height_2);
     PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_kp_u_height_2);
-    __pyx_t_10 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_10 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __pyx_t_8 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_9) > __pyx_t_8) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_9) : __pyx_t_8;
@@ -6941,7 +7141,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __Pyx_GIVEREF(__pyx_t_9);
     PyTuple_SET_ITEM(__pyx_t_4, 3, __pyx_t_9);
     __pyx_t_9 = 0;
-    __pyx_t_9 = __Pyx_PyUnicode_Join(__pyx_t_4, 4, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 286, __pyx_L7_error)
+    __pyx_t_9 = __Pyx_PyUnicode_Join(__pyx_t_4, 4, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 294, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -6955,14 +7155,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       }
     }
     if (!__pyx_t_4) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L7_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L7_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_9};
-        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L7_error)
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L7_error)
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -6971,20 +7171,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_9};
-        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L7_error)
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L7_error)
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       } else
       #endif
       {
-        __pyx_t_10 = PyTuple_New(1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 286, __pyx_L7_error)
+        __pyx_t_10 = PyTuple_New(1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 294, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_4); __pyx_t_4 = NULL;
         __Pyx_GIVEREF(__pyx_t_9);
         PyTuple_SET_ITEM(__pyx_t_10, 0+1, __pyx_t_9);
         __pyx_t_9 = 0;
-        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L7_error)
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       }
@@ -6992,58 +7192,58 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "timedcapture/__init__.pyx":289
+    /* "timedcapture/__init__.pyx":297
  * 
  *         # configure exposure
  *         if has_control(device, EXT_CID_EXPOSURE_TIME_US) == True:             # <<<<<<<<<<<<<<
  *             set_control(device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
  *             set_control(device, EXT_CID_EXPOSURE_TIME_US, exposure_us)
  */
-    __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_device, 0x199E201); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L7_error)
+    __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_device, 0x199E201); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L7_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 297, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 289, __pyx_L7_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 297, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_3) {
 
-      /* "timedcapture/__init__.pyx":290
+      /* "timedcapture/__init__.pyx":298
  *         # configure exposure
  *         if has_control(device, EXT_CID_EXPOSURE_TIME_US) == True:
  *             set_control(device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)             # <<<<<<<<<<<<<<
  *             set_control(device, EXT_CID_EXPOSURE_TIME_US, exposure_us)
  *             log(f"[INFO] exposure_time_us<-{exposure_us}")
  */
-      __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x9A0901, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L7_error)
+      __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x9A0901, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "timedcapture/__init__.pyx":291
+      /* "timedcapture/__init__.pyx":299
  *         if has_control(device, EXT_CID_EXPOSURE_TIME_US) == True:
  *             set_control(device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
  *             set_control(device, EXT_CID_EXPOSURE_TIME_US, exposure_us)             # <<<<<<<<<<<<<<
  *             log(f"[INFO] exposure_time_us<-{exposure_us}")
  *         else:
  */
-      __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x199E201, __pyx_v_exposure_us); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L7_error)
+      __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x199E201, __pyx_v_exposure_us); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "timedcapture/__init__.pyx":292
+      /* "timedcapture/__init__.pyx":300
  *             set_control(device, V4L2_CID_EXPOSURE_AUTO,   V4L2_EXPOSURE_MANUAL)
  *             set_control(device, EXT_CID_EXPOSURE_TIME_US, exposure_us)
  *             log(f"[INFO] exposure_time_us<-{exposure_us}")             # <<<<<<<<<<<<<<
  *         else:
  *             log(f"***no exposure_time_us setting detected")
  */
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L7_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_10 = __Pyx_PyInt_From_npy_int32(__pyx_v_exposure_us); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 292, __pyx_L7_error)
+      __pyx_t_10 = __Pyx_PyInt_From_npy_int32(__pyx_v_exposure_us); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 300, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 292, __pyx_L7_error)
+      __pyx_t_9 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 300, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      __pyx_t_10 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_exposure_time_us, __pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 292, __pyx_L7_error)
+      __pyx_t_10 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_exposure_time_us, __pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 300, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -7057,14 +7257,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
         }
       }
       if (!__pyx_t_9) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L7_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L7_error)
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_1)) {
           PyObject *__pyx_temp[2] = {__pyx_t_9, __pyx_t_10};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L7_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L7_error)
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -7073,20 +7273,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
           PyObject *__pyx_temp[2] = {__pyx_t_9, __pyx_t_10};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L7_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L7_error)
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         } else
         #endif
         {
-          __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 292, __pyx_L7_error)
+          __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 300, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_9); __pyx_t_9 = NULL;
           __Pyx_GIVEREF(__pyx_t_10);
           PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_10);
           __pyx_t_10 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L7_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
@@ -7094,7 +7294,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "timedcapture/__init__.pyx":289
+      /* "timedcapture/__init__.pyx":297
  * 
  *         # configure exposure
  *         if has_control(device, EXT_CID_EXPOSURE_TIME_US) == True:             # <<<<<<<<<<<<<<
@@ -7104,7 +7304,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       goto __pyx_L9;
     }
 
-    /* "timedcapture/__init__.pyx":294
+    /* "timedcapture/__init__.pyx":302
  *             log(f"[INFO] exposure_time_us<-{exposure_us}")
  *         else:
  *             log(f"***no exposure_time_us setting detected")             # <<<<<<<<<<<<<<
@@ -7112,42 +7312,42 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  *         # configure gain
  */
     /*else*/ {
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L7_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L7_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __pyx_L9:;
 
-    /* "timedcapture/__init__.pyx":297
+    /* "timedcapture/__init__.pyx":305
  * 
  *         # configure gain
  *         if has_control(device, EXT_CID_GAIN_AUTO) == True:             # <<<<<<<<<<<<<<
  *             set_control(device, EXT_CID_GAIN_AUTO, EXT_GAIN_MANUAL)
  *         if has_control(device, V4L2_CID_GAIN) == True:
  */
-    __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_device, 0x199E205); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L7_error)
+    __pyx_t_1 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_device, 0x199E205); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 305, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 297, __pyx_L7_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 297, __pyx_L7_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 305, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_3) {
 
-      /* "timedcapture/__init__.pyx":298
+      /* "timedcapture/__init__.pyx":306
  *         # configure gain
  *         if has_control(device, EXT_CID_GAIN_AUTO) == True:
  *             set_control(device, EXT_CID_GAIN_AUTO, EXT_GAIN_MANUAL)             # <<<<<<<<<<<<<<
  *         if has_control(device, V4L2_CID_GAIN) == True:
  *             set_control(device, V4L2_CID_GAIN, gain)
  */
-      __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x199E205, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L7_error)
+      __pyx_t_2 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x199E205, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "timedcapture/__init__.pyx":297
+      /* "timedcapture/__init__.pyx":305
  * 
  *         # configure gain
  *         if has_control(device, EXT_CID_GAIN_AUTO) == True:             # <<<<<<<<<<<<<<
@@ -7156,47 +7356,47 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     }
 
-    /* "timedcapture/__init__.pyx":299
+    /* "timedcapture/__init__.pyx":307
  *         if has_control(device, EXT_CID_GAIN_AUTO) == True:
  *             set_control(device, EXT_CID_GAIN_AUTO, EXT_GAIN_MANUAL)
  *         if has_control(device, V4L2_CID_GAIN) == True:             # <<<<<<<<<<<<<<
  *             set_control(device, V4L2_CID_GAIN, gain)
  *             log(f"[INFO] gain<-{gain}")
  */
-    __pyx_t_2 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_device, 0x980913); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L7_error)
+    __pyx_t_2 = __pyx_f_12timedcapture_8__init___has_control(__pyx_v_device, 0x980913); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L7_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 299, __pyx_L7_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 307, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_3) {
 
-      /* "timedcapture/__init__.pyx":300
+      /* "timedcapture/__init__.pyx":308
  *             set_control(device, EXT_CID_GAIN_AUTO, EXT_GAIN_MANUAL)
  *         if has_control(device, V4L2_CID_GAIN) == True:
  *             set_control(device, V4L2_CID_GAIN, gain)             # <<<<<<<<<<<<<<
  *             log(f"[INFO] gain<-{gain}")
  *         else:
  */
-      __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x980913, __pyx_v_gain); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L7_error)
+      __pyx_t_1 = __pyx_f_12timedcapture_8__init___set_control(__pyx_v_device, 0x980913, __pyx_v_gain); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "timedcapture/__init__.pyx":301
+      /* "timedcapture/__init__.pyx":309
  *         if has_control(device, V4L2_CID_GAIN) == True:
  *             set_control(device, V4L2_CID_GAIN, gain)
  *             log(f"[INFO] gain<-{gain}")             # <<<<<<<<<<<<<<
  *         else:
  *             log(f"***no gain setting detected")
  */
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 301, __pyx_L7_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyInt_From_npy_int32(__pyx_v_gain); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 301, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyInt_From_npy_int32(__pyx_v_gain); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 309, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 301, __pyx_L7_error)
+      __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 309, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_gain, __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 301, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_gain, __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 309, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_t_10 = NULL;
@@ -7210,14 +7410,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
         }
       }
       if (!__pyx_t_10) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L7_error)
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L7_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_2)) {
           PyObject *__pyx_temp[2] = {__pyx_t_10, __pyx_t_4};
-          __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L7_error)
+          __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L7_error)
           __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -7226,20 +7426,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
           PyObject *__pyx_temp[2] = {__pyx_t_10, __pyx_t_4};
-          __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L7_error)
+          __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L7_error)
           __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         } else
         #endif
         {
-          __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 301, __pyx_L7_error)
+          __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 309, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_9);
           __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_10); __pyx_t_10 = NULL;
           __Pyx_GIVEREF(__pyx_t_4);
           PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_t_4);
           __pyx_t_4 = 0;
-          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L7_error)
+          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
@@ -7247,7 +7447,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "timedcapture/__init__.pyx":299
+      /* "timedcapture/__init__.pyx":307
  *         if has_control(device, EXT_CID_GAIN_AUTO) == True:
  *             set_control(device, EXT_CID_GAIN_AUTO, EXT_GAIN_MANUAL)
  *         if has_control(device, V4L2_CID_GAIN) == True:             # <<<<<<<<<<<<<<
@@ -7257,7 +7457,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       goto __pyx_L11;
     }
 
-    /* "timedcapture/__init__.pyx":303
+    /* "timedcapture/__init__.pyx":311
  *             log(f"[INFO] gain<-{gain}")
  *         else:
  *             log(f"***no gain setting detected")             # <<<<<<<<<<<<<<
@@ -7265,29 +7465,29 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  *         # capture
  */
     /*else*/ {
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L7_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 311, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L7_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 311, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __pyx_L11:;
 
-    /* "timedcapture/__init__.pyx":306
+    /* "timedcapture/__init__.pyx":314
  * 
  *         # capture
  *         buf  = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H') # struct format used             # <<<<<<<<<<<<<<
  *         log("[INFO] capture starting.")
  *         start_capture(device, buf)
  */
-    __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L7_error)
+    __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L7_error)
+    __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_9 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 306, __pyx_L7_error)
+    __pyx_t_9 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L7_error)
+    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -7295,34 +7495,34 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_9);
     __pyx_t_1 = 0;
     __pyx_t_9 = 0;
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 306, __pyx_L7_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyInt_FromSize_t((sizeof(__pyx_t_12timedcapture_8__init___uint16))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyInt_FromSize_t((sizeof(__pyx_t_12timedcapture_8__init___uint16))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_itemsize, __pyx_t_4) < 0) __PYX_ERR(0, 306, __pyx_L7_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_itemsize, __pyx_t_4) < 0) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_format, __pyx_n_u_H) < 0) __PYX_ERR(0, 306, __pyx_L7_error)
-    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_array_type), __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L7_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_format, __pyx_n_u_H) < 0) __PYX_ERR(0, 314, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_array_type), __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_buf = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "timedcapture/__init__.pyx":307
+    /* "timedcapture/__init__.pyx":315
  *         # capture
  *         buf  = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H') # struct format used
  *         log("[INFO] capture starting.")             # <<<<<<<<<<<<<<
  *         start_capture(device, buf)
  *         read_frame(device, True)
  */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 307, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 315, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "timedcapture/__init__.pyx":308
+    /* "timedcapture/__init__.pyx":316
  *         buf  = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H') # struct format used
  *         log("[INFO] capture starting.")
  *         start_capture(device, buf)             # <<<<<<<<<<<<<<
@@ -7330,17 +7530,17 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  *         log("[INFO] read 1 frame.")
  */
     __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_12timedcapture_8__init___uint16(__pyx_v_buf);
-    if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 308, __pyx_L7_error)
+    if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 316, __pyx_L7_error)
     __pyx_t_12.__pyx_n = 1;
     __pyx_t_12.buffer = __pyx_t_11;
-    __pyx_t_2 = __pyx_f_12timedcapture_8__init___start_capture(__pyx_v_device, &__pyx_t_12); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L7_error)
+    __pyx_t_2 = __pyx_f_12timedcapture_8__init___start_capture(__pyx_v_device, &__pyx_t_12); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
     __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
     __pyx_t_11.memview = NULL;
     __pyx_t_11.data = NULL;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "timedcapture/__init__.pyx":309
+    /* "timedcapture/__init__.pyx":317
  *         log("[INFO] capture starting.")
  *         start_capture(device, buf)
  *         read_frame(device, True)             # <<<<<<<<<<<<<<
@@ -7349,46 +7549,46 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     __pyx_t_13.__pyx_n = 1;
     __pyx_t_13.read_unbuffered = 1;
-    __pyx_t_2 = __pyx_f_12timedcapture_8__init___read_frame(__pyx_v_device, &__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L7_error)
+    __pyx_t_2 = __pyx_f_12timedcapture_8__init___read_frame(__pyx_v_device, &__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "timedcapture/__init__.pyx":310
+    /* "timedcapture/__init__.pyx":318
  *         start_capture(device, buf)
  *         read_frame(device, True)
  *         log("[INFO] read 1 frame.")             # <<<<<<<<<<<<<<
  *         outpath = Path("local/frame_func.png")
  *         if not outpath.parent.exists():
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 310, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "timedcapture/__init__.pyx":311
+    /* "timedcapture/__init__.pyx":319
  *         read_frame(device, True)
  *         log("[INFO] read 1 frame.")
  *         outpath = Path("local/frame_func.png")             # <<<<<<<<<<<<<<
  *         if not outpath.parent.exists():
  *             outpath.parent.mkdir()
  */
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_v_Path, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 311, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_v_Path, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_v_outpath = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "timedcapture/__init__.pyx":312
+    /* "timedcapture/__init__.pyx":320
  *         log("[INFO] read 1 frame.")
  *         outpath = Path("local/frame_func.png")
  *         if not outpath.parent.exists():             # <<<<<<<<<<<<<<
  *             outpath.parent.mkdir()
  *         imageio.imsave(str(outpath), buf)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 320, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 312, __pyx_L7_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 320, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -7402,28 +7602,28 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       }
     }
     if (__pyx_t_2) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L7_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else {
-      __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L7_error)
     }
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 312, __pyx_L7_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 320, __pyx_L7_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_14 = ((!__pyx_t_3) != 0);
     if (__pyx_t_14) {
 
-      /* "timedcapture/__init__.pyx":313
+      /* "timedcapture/__init__.pyx":321
  *         outpath = Path("local/frame_func.png")
  *         if not outpath.parent.exists():
  *             outpath.parent.mkdir()             # <<<<<<<<<<<<<<
  *         imageio.imsave(str(outpath), buf)
  *         log("[INFO] saved the frame.")
  */
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 313, __pyx_L7_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 321, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_mkdir); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 313, __pyx_L7_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_mkdir); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -7437,16 +7637,16 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
         }
       }
       if (__pyx_t_9) {
-        __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L7_error)
+        __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L7_error)
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       } else {
-        __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L7_error)
+        __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L7_error)
       }
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "timedcapture/__init__.pyx":312
+      /* "timedcapture/__init__.pyx":320
  *         log("[INFO] read 1 frame.")
  *         outpath = Path("local/frame_func.png")
  *         if not outpath.parent.exists():             # <<<<<<<<<<<<<<
@@ -7455,21 +7655,21 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
     }
 
-    /* "timedcapture/__init__.pyx":314
+    /* "timedcapture/__init__.pyx":322
  *         if not outpath.parent.exists():
  *             outpath.parent.mkdir()
  *         imageio.imsave(str(outpath), buf)             # <<<<<<<<<<<<<<
  *         log("[INFO] saved the frame.")
  *         log("[INFO] capture ending.")
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_imageio, __pyx_n_s_imsave); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_imageio, __pyx_n_s_imsave); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 322, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 314, __pyx_L7_error)
+    __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 322, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_INCREF(__pyx_v_outpath);
     __Pyx_GIVEREF(__pyx_v_outpath);
     PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_v_outpath);
-    __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyUnicode_Type)), __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L7_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyUnicode_Type)), __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_9 = NULL;
@@ -7487,7 +7687,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_t_1, __pyx_v_buf};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L7_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7496,14 +7696,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_t_1, __pyx_v_buf};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L7_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else
     #endif
     {
-      __pyx_t_10 = PyTuple_New(2+__pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 314, __pyx_L7_error)
+      __pyx_t_10 = PyTuple_New(2+__pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 322, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_10);
       if (__pyx_t_9) {
         __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -7514,54 +7714,54 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       __Pyx_GIVEREF(__pyx_v_buf);
       PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_15, __pyx_v_buf);
       __pyx_t_1 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L7_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "timedcapture/__init__.pyx":315
+    /* "timedcapture/__init__.pyx":323
  *             outpath.parent.mkdir()
  *         imageio.imsave(str(outpath), buf)
  *         log("[INFO] saved the frame.")             # <<<<<<<<<<<<<<
  *         log("[INFO] capture ending.")
  *         stop_capture(device)
  */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 315, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "timedcapture/__init__.pyx":316
+    /* "timedcapture/__init__.pyx":324
  *         imageio.imsave(str(outpath), buf)
  *         log("[INFO] saved the frame.")
  *         log("[INFO] capture ending.")             # <<<<<<<<<<<<<<
  *         stop_capture(device)
  *     finally:
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L7_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 324, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 316, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "timedcapture/__init__.pyx":317
+    /* "timedcapture/__init__.pyx":325
  *         log("[INFO] saved the frame.")
  *         log("[INFO] capture ending.")
  *         stop_capture(device)             # <<<<<<<<<<<<<<
  *     finally:
  *         ccapture.capture_close(device)
  */
-    __pyx_t_4 = __pyx_f_12timedcapture_8__init___stop_capture(__pyx_v_device); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L7_error)
+    __pyx_t_4 = __pyx_f_12timedcapture_8__init___stop_capture(__pyx_v_device); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 325, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
 
-  /* "timedcapture/__init__.pyx":319
+  /* "timedcapture/__init__.pyx":327
  *         stop_capture(device)
  *     finally:
  *         ccapture.capture_close(device)             # <<<<<<<<<<<<<<
@@ -7572,7 +7772,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     /*normal exit:*/{
       capture_close(__pyx_v_device);
 
-      /* "timedcapture/__init__.pyx":320
+      /* "timedcapture/__init__.pyx":328
  *     finally:
  *         ccapture.capture_close(device)
  *         ccapture.capture_format_dealloc(format)             # <<<<<<<<<<<<<<
@@ -7581,7 +7781,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
       capture_format_dealloc(__pyx_v_format);
 
-      /* "timedcapture/__init__.pyx":321
+      /* "timedcapture/__init__.pyx":329
  *         ccapture.capture_close(device)
  *         ccapture.capture_format_dealloc(format)
  *         ccapture.capture_device_dealloc(device)             # <<<<<<<<<<<<<<
@@ -7613,7 +7813,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
       __pyx_t_15 = __pyx_lineno; __pyx_t_16 = __pyx_clineno; __pyx_t_17 = __pyx_filename;
       {
 
-        /* "timedcapture/__init__.pyx":319
+        /* "timedcapture/__init__.pyx":327
  *         stop_capture(device)
  *     finally:
  *         ccapture.capture_close(device)             # <<<<<<<<<<<<<<
@@ -7622,7 +7822,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
         capture_close(__pyx_v_device);
 
-        /* "timedcapture/__init__.pyx":320
+        /* "timedcapture/__init__.pyx":328
  *     finally:
  *         ccapture.capture_close(device)
  *         ccapture.capture_format_dealloc(format)             # <<<<<<<<<<<<<<
@@ -7631,7 +7831,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
  */
         capture_format_dealloc(__pyx_v_format);
 
-        /* "timedcapture/__init__.pyx":321
+        /* "timedcapture/__init__.pyx":329
  *         ccapture.capture_close(device)
  *         ccapture.capture_format_dealloc(format)
  *         ccapture.capture_device_dealloc(device)             # <<<<<<<<<<<<<<
@@ -7658,8 +7858,8 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
     __pyx_L8:;
   }
 
-  /* "timedcapture/__init__.pyx":254
- *             ccapture.capture_format_dealloc(self.format)
+  /* "timedcapture/__init__.pyx":262
+ *         self.close()
  * 
  * def test_calls(path="/dev/video0",             # <<<<<<<<<<<<<<
  *                uint16 width=640,
@@ -7690,7 +7890,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___2test_calls(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "timedcapture/__init__.pyx":323
+/* "timedcapture/__init__.pyx":331
  *         ccapture.capture_device_dealloc(device)
  * 
  * def test_device(path="/dev/video0",             # <<<<<<<<<<<<<<
@@ -7764,7 +7964,7 @@ static PyObject *__pyx_pw_12timedcapture_8__init___5test_device(PyObject *__pyx_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "test_device") < 0)) __PYX_ERR(0, 323, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "test_device") < 0)) __PYX_ERR(0, 331, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7784,29 +7984,29 @@ static PyObject *__pyx_pw_12timedcapture_8__init___5test_device(PyObject *__pyx_
     }
     __pyx_v_path = values[0];
     if (values[1]) {
-      __pyx_v_width = __Pyx_PyInt_As_npy_uint16(values[1]); if (unlikely((__pyx_v_width == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 324, __pyx_L3_error)
+      __pyx_v_width = __Pyx_PyInt_As_npy_uint16(values[1]); if (unlikely((__pyx_v_width == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
     } else {
       __pyx_v_width = ((__pyx_t_12timedcapture_8__init___uint16)0x280);
     }
     if (values[2]) {
-      __pyx_v_height = __Pyx_PyInt_As_npy_uint16(values[2]); if (unlikely((__pyx_v_height == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 325, __pyx_L3_error)
+      __pyx_v_height = __Pyx_PyInt_As_npy_uint16(values[2]); if (unlikely((__pyx_v_height == ((npy_uint16)-1)) && PyErr_Occurred())) __PYX_ERR(0, 333, __pyx_L3_error)
     } else {
       __pyx_v_height = ((__pyx_t_12timedcapture_8__init___uint16)0x1E0);
     }
     if (values[3]) {
-      __pyx_v_exposure_us = __Pyx_PyInt_As_npy_int32(values[3]); if (unlikely((__pyx_v_exposure_us == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 326, __pyx_L3_error)
+      __pyx_v_exposure_us = __Pyx_PyInt_As_npy_int32(values[3]); if (unlikely((__pyx_v_exposure_us == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 334, __pyx_L3_error)
     } else {
       __pyx_v_exposure_us = ((__pyx_t_12timedcapture_8__init___int32)0x1388);
     }
     if (values[4]) {
-      __pyx_v_gain = __Pyx_PyInt_As_npy_int32(values[4]); if (unlikely((__pyx_v_gain == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L3_error)
+      __pyx_v_gain = __Pyx_PyInt_As_npy_int32(values[4]); if (unlikely((__pyx_v_gain == ((npy_int32)-1)) && PyErr_Occurred())) __PYX_ERR(0, 335, __pyx_L3_error)
     } else {
       __pyx_v_gain = ((__pyx_t_12timedcapture_8__init___int32)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("test_device", 0, 0, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 323, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("test_device", 0, 0, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 331, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("timedcapture.__init__.test_device", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7839,66 +8039,66 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   PyObject *__pyx_t_11 = NULL;
   __Pyx_RefNannySetupContext("test_device", 0);
 
-  /* "timedcapture/__init__.pyx":328
+  /* "timedcapture/__init__.pyx":336
  *                int32 exposure_us=5000,
  *                int32 gain=0):
  *     import imageio             # <<<<<<<<<<<<<<
  *     from pathlib import Path
  *     log("---test_device---")
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_imageio, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_imageio, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_imageio = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":329
+  /* "timedcapture/__init__.pyx":337
  *                int32 gain=0):
  *     import imageio
  *     from pathlib import Path             # <<<<<<<<<<<<<<
  *     log("---test_device---")
  *     log(f"[INFO] initializing a device: {path}")
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_Path);
   __Pyx_GIVEREF(__pyx_n_s_Path);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Path);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pathlib, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pathlib, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_t_1);
   __pyx_v_Path = __pyx_t_1;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":330
+  /* "timedcapture/__init__.pyx":338
  *     import imageio
  *     from pathlib import Path
  *     log("---test_device---")             # <<<<<<<<<<<<<<
  *     log(f"[INFO] initializing a device: {path}")
  *     device = Device(path)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 338, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__18, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__18, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":331
+  /* "timedcapture/__init__.pyx":339
  *     from pathlib import Path
  *     log("---test_device---")
  *     log(f"[INFO] initializing a device: {path}")             # <<<<<<<<<<<<<<
  *     device = Device(path)
  *     log("[INFO] setting parameters")
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_v_path, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_initializing_a_device, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_INFO_initializing_a_device, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7912,14 +8112,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -7928,20 +8128,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 331, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 339, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -7949,74 +8149,74 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":332
+  /* "timedcapture/__init__.pyx":340
  *     log("---test_device---")
  *     log(f"[INFO] initializing a device: {path}")
  *     device = Device(path)             # <<<<<<<<<<<<<<
  *     log("[INFO] setting parameters")
  *     device.width = width
  */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_path);
   __Pyx_GIVEREF(__pyx_v_path);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_path);
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12timedcapture_8__init___Device), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12timedcapture_8__init___Device), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_device = ((struct __pyx_obj_12timedcapture_8__init___Device *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":333
+  /* "timedcapture/__init__.pyx":341
  *     log(f"[INFO] initializing a device: {path}")
  *     device = Device(path)
  *     log("[INFO] setting parameters")             # <<<<<<<<<<<<<<
  *     device.width = width
  *     device.height = height
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":334
+  /* "timedcapture/__init__.pyx":342
  *     device = Device(path)
  *     log("[INFO] setting parameters")
  *     device.width = width             # <<<<<<<<<<<<<<
  *     device.height = height
  *     device.size = (width, height)
  */
-  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_width, __pyx_t_1) < 0) __PYX_ERR(0, 334, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_width, __pyx_t_1) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":335
+  /* "timedcapture/__init__.pyx":343
  *     log("[INFO] setting parameters")
  *     device.width = width
  *     device.height = height             # <<<<<<<<<<<<<<
  *     device.size = (width, height)
  *     device.exposure_us = exposure_us
  */
-  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_height, __pyx_t_1) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_height, __pyx_t_1) < 0) __PYX_ERR(0, 343, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "timedcapture/__init__.pyx":336
+  /* "timedcapture/__init__.pyx":344
  *     device.width = width
  *     device.height = height
  *     device.size = (width, height)             # <<<<<<<<<<<<<<
  *     device.exposure_us = exposure_us
  *     device.gain = gain
  */
-  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_uint16(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_npy_uint16(__pyx_v_height); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
@@ -8024,43 +8224,43 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_2);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
-  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_size, __pyx_t_5) < 0) __PYX_ERR(0, 336, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_size, __pyx_t_5) < 0) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":337
+  /* "timedcapture/__init__.pyx":345
  *     device.height = height
  *     device.size = (width, height)
  *     device.exposure_us = exposure_us             # <<<<<<<<<<<<<<
  *     device.gain = gain
  *     log(f"[INFO] width={device.width}, height={device.height}, exposure_us={device.exposure_us}, gain={device.gain}")
  */
-  __pyx_t_5 = __Pyx_PyInt_From_npy_int32(__pyx_v_exposure_us); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_npy_int32(__pyx_v_exposure_us); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_exposure_us, __pyx_t_5) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_exposure_us, __pyx_t_5) < 0) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":338
+  /* "timedcapture/__init__.pyx":346
  *     device.size = (width, height)
  *     device.exposure_us = exposure_us
  *     device.gain = gain             # <<<<<<<<<<<<<<
  *     log(f"[INFO] width={device.width}, height={device.height}, exposure_us={device.exposure_us}, gain={device.gain}")
  *     log("[INFO] capture starting.")
  */
-  __pyx_t_5 = __Pyx_PyInt_From_npy_int32(__pyx_v_gain); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_npy_int32(__pyx_v_gain); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_gain, __pyx_t_5) < 0) __PYX_ERR(0, 338, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_gain, __pyx_t_5) < 0) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":339
+  /* "timedcapture/__init__.pyx":347
  *     device.exposure_us = exposure_us
  *     device.gain = gain
  *     log(f"[INFO] width={device.width}, height={device.height}, exposure_us={device.exposure_us}, gain={device.gain}")             # <<<<<<<<<<<<<<
  *     log("[INFO] capture starting.")
  *     device.start_capture()
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = 0;
   __pyx_t_7 = 127;
@@ -8068,9 +8268,9 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __pyx_t_6 += 13;
   __Pyx_GIVEREF(__pyx_kp_u_INFO_width_2);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_INFO_width_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_width); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_width); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_7 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) > __pyx_t_7) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) : __pyx_t_7;
@@ -8082,9 +8282,9 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __pyx_t_6 += 9;
   __Pyx_GIVEREF(__pyx_kp_u_height_3);
   PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_height_3);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_height); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_height); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_7 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_7) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_7;
@@ -8096,9 +8296,9 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __pyx_t_6 += 14;
   __Pyx_GIVEREF(__pyx_kp_u_exposure_us_2);
   PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_kp_u_exposure_us_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_exposure_us); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_exposure_us); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_7 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) > __pyx_t_7) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) : __pyx_t_7;
@@ -8110,9 +8310,9 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __pyx_t_6 += 7;
   __Pyx_GIVEREF(__pyx_kp_u_gain_2);
   PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_kp_u_gain_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_gain); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_gain); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_7 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_7) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_7;
@@ -8120,7 +8320,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_1, 7, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_1, 8, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_1, 8, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -8134,14 +8334,14 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 339, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_5);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_4};
-      __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 339, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8150,20 +8350,20 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_4};
-      __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 339, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1); __pyx_t_1 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 339, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -8171,28 +8371,28 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":340
+  /* "timedcapture/__init__.pyx":348
  *     device.gain = gain
  *     log(f"[INFO] width={device.width}, height={device.height}, exposure_us={device.exposure_us}, gain={device.gain}")
  *     log("[INFO] capture starting.")             # <<<<<<<<<<<<<<
  *     device.start_capture()
  *     log("[INFO] reading and saving 1 frame.")
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":341
+  /* "timedcapture/__init__.pyx":349
  *     log(f"[INFO] width={device.width}, height={device.height}, exposure_us={device.exposure_us}, gain={device.gain}")
  *     log("[INFO] capture starting.")
  *     device.start_capture()             # <<<<<<<<<<<<<<
  *     log("[INFO] reading and saving 1 frame.")
  *     outpath = Path("local/frame_obj.png")
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_start_capture); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_start_capture); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -8205,51 +8405,51 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":342
+  /* "timedcapture/__init__.pyx":350
  *     log("[INFO] capture starting.")
  *     device.start_capture()
  *     log("[INFO] reading and saving 1 frame.")             # <<<<<<<<<<<<<<
  *     outpath = Path("local/frame_obj.png")
  *     if not outpath.parent.exists():
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":343
+  /* "timedcapture/__init__.pyx":351
  *     device.start_capture()
  *     log("[INFO] reading and saving 1 frame.")
  *     outpath = Path("local/frame_obj.png")             # <<<<<<<<<<<<<<
  *     if not outpath.parent.exists():
  *         outpath.parent.mkdir()
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_v_Path, __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_v_Path, __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_outpath = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":344
+  /* "timedcapture/__init__.pyx":352
  *     log("[INFO] reading and saving 1 frame.")
  *     outpath = Path("local/frame_obj.png")
  *     if not outpath.parent.exists():             # <<<<<<<<<<<<<<
  *         outpath.parent.mkdir()
  *     imageio.imsave(str(outpath), device.read_frame(True))
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -8263,28 +8463,28 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     }
   }
   if (__pyx_t_2) {
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 352, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   } else {
-    __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 352, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_9 = ((!__pyx_t_8) != 0);
   if (__pyx_t_9) {
 
-    /* "timedcapture/__init__.pyx":345
+    /* "timedcapture/__init__.pyx":353
  *     outpath = Path("local/frame_obj.png")
  *     if not outpath.parent.exists():
  *         outpath.parent.mkdir()             # <<<<<<<<<<<<<<
  *     imageio.imsave(str(outpath), device.read_frame(True))
  *     log("[INFO] capture ending.")
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_outpath, __pyx_n_s_parent); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_mkdir); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_mkdir); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -8298,16 +8498,16 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
       }
     }
     if (__pyx_t_3) {
-      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 345, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 345, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "timedcapture/__init__.pyx":344
+    /* "timedcapture/__init__.pyx":352
  *     log("[INFO] reading and saving 1 frame.")
  *     outpath = Path("local/frame_obj.png")
  *     if not outpath.parent.exists():             # <<<<<<<<<<<<<<
@@ -8316,26 +8516,26 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
  */
   }
 
-  /* "timedcapture/__init__.pyx":346
+  /* "timedcapture/__init__.pyx":354
  *     if not outpath.parent.exists():
  *         outpath.parent.mkdir()
  *     imageio.imsave(str(outpath), device.read_frame(True))             # <<<<<<<<<<<<<<
  *     log("[INFO] capture ending.")
  *     device.stop_capture()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_imageio, __pyx_n_s_imsave); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_imageio, __pyx_n_s_imsave); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_outpath);
   __Pyx_GIVEREF(__pyx_v_outpath);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_outpath);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyUnicode_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyUnicode_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_read_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_read_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -8353,7 +8553,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_4, __pyx_t_1};
-    __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8363,7 +8563,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_4, __pyx_t_1};
-    __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8371,7 +8571,7 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
   } else
   #endif
   {
-    __pyx_t_11 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -8382,32 +8582,32 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_10, __pyx_t_1);
     __pyx_t_4 = 0;
     __pyx_t_1 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "timedcapture/__init__.pyx":347
+  /* "timedcapture/__init__.pyx":355
  *         outpath.parent.mkdir()
  *     imageio.imsave(str(outpath), device.read_frame(True))
  *     log("[INFO] capture ending.")             # <<<<<<<<<<<<<<
  *     device.stop_capture()
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_log); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__24, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__24, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":348
+  /* "timedcapture/__init__.pyx":356
  *     imageio.imsave(str(outpath), device.read_frame(True))
  *     log("[INFO] capture ending.")
  *     device.stop_capture()             # <<<<<<<<<<<<<<
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_stop_capture); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_device), __pyx_n_s_stop_capture); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_11 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -8420,16 +8620,16 @@ static PyObject *__pyx_pf_12timedcapture_8__init___4test_device(CYTHON_UNUSED Py
     }
   }
   if (__pyx_t_11) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 356, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   } else {
-    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 356, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "timedcapture/__init__.pyx":323
+  /* "timedcapture/__init__.pyx":331
  *         ccapture.capture_device_dealloc(device)
  * 
  * def test_device(path="/dev/video0",             # <<<<<<<<<<<<<<
@@ -23816,7 +24016,7 @@ static void __pyx_tp_dealloc_12timedcapture_8__init___Device(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     ++Py_REFCNT(o);
-    __pyx_pw_12timedcapture_8__init___6Device_9__dealloc__(o);
+    __pyx_pw_12timedcapture_8__init___6Device_11__dealloc__(o);
     --Py_REFCNT(o);
     PyErr_Restore(etype, eval, etb);
   }
@@ -23903,8 +24103,9 @@ static PyMethodDef __pyx_methods_12timedcapture_8__init___Device[] = {
   {"start_capture", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_3start_capture, METH_NOARGS, 0},
   {"read_frame", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_5read_frame, METH_VARARGS|METH_KEYWORDS, 0},
   {"stop_capture", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_7stop_capture, METH_NOARGS, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_11__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_13__setstate_cython__, METH_O, 0},
+  {"close", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_9close, METH_NOARGS, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_13__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_12timedcapture_8__init___6Device_15__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
@@ -24716,6 +24917,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u__10, __pyx_k__10, sizeof(__pyx_k__10), 0, 1, 0, 0},
   {&__pyx_kp_u__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 1, 0, 0},
   {&__pyx_kp_u__4, __pyx_k__4, sizeof(__pyx_k__4), 0, 1, 0, 0},
+  {&__pyx_kp_u__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 1, 0, 0},
   {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
   {&__pyx_n_s_array, __pyx_k_array, sizeof(__pyx_k_array), 0, 0, 1, 1},
   {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
@@ -24727,10 +24929,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cause, __pyx_k_cause, sizeof(__pyx_k_cause), 0, 0, 1, 1},
   {&__pyx_n_s_class, __pyx_k_class, sizeof(__pyx_k_class), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
+  {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
   {&__pyx_kp_u_code, __pyx_k_code, sizeof(__pyx_k_code), 0, 1, 0, 0},
   {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
   {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
   {&__pyx_kp_u_control_exposure_time_us_not_fo, __pyx_k_control_exposure_time_us_not_fo, sizeof(__pyx_k_control_exposure_time_us_not_fo), 0, 1, 0, 0},
+  {&__pyx_kp_u_control_gain_auto_not_found, __pyx_k_control_gain_auto_not_found, sizeof(__pyx_k_control_gain_auto_not_found), 0, 1, 0, 0},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_kp_u_dev_video0, __pyx_k_dev_video0, sizeof(__pyx_k_dev_video0), 0, 1, 0, 0},
   {&__pyx_n_s_device, __pyx_k_device, sizeof(__pyx_k_device), 0, 0, 1, 1},
@@ -24758,7 +24962,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_gain_2, __pyx_k_gain_2, sizeof(__pyx_k_gain_2), 0, 1, 0, 0},
   {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
   {&__pyx_kp_s_got_differing_extents_in_dimensi, __pyx_k_got_differing_extents_in_dimensi, sizeof(__pyx_k_got_differing_extents_in_dimensi), 0, 0, 1, 0},
-  {&__pyx_n_s_has_control, __pyx_k_has_control, sizeof(__pyx_k_has_control), 0, 0, 1, 1},
   {&__pyx_n_s_height, __pyx_k_height, sizeof(__pyx_k_height), 0, 0, 1, 1},
   {&__pyx_kp_u_height_2, __pyx_k_height_2, sizeof(__pyx_k_height_2), 0, 1, 0, 0},
   {&__pyx_kp_u_height_3, __pyx_k_height_3, sizeof(__pyx_k_height_3), 0, 1, 0, 0},
@@ -24849,7 +25052,7 @@ static int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 64, __pyx_L1_error)
   __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 110, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(0, 126, __pyx_L1_error)
-  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(2, 218, __pyx_L1_error)
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(2, 231, __pyx_L1_error)
@@ -24866,17 +25069,6 @@ static int __Pyx_InitCachedBuiltins(void) {
 static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
-
-  /* "timedcapture/__init__.pyx":159
- *             raise e
- *         self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
- *         self.has_exp_us = self.has_control(EXT_CID_EXPOSURE_TIME_US)             # <<<<<<<<<<<<<<
- *         if self.has_exp_us == False:
- *             import sys
- */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_int_26862081); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 159, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__6);
-  __Pyx_GIVEREF(__pyx_tuple__6);
 
   /* "(tree fragment)":2
  * def __reduce_cython__(self):
@@ -24897,167 +25089,167 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "timedcapture/__init__.pyx":262
+  /* "timedcapture/__init__.pyx":270
  *     import imageio
  *     from pathlib import Path
  *     log("---test_calls---")             # <<<<<<<<<<<<<<
  *     device = ccapture.capture_device_init()
  *     if device == NULL:
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_test_calls); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_test_calls); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "timedcapture/__init__.pyx":294
+  /* "timedcapture/__init__.pyx":302
  *             log(f"[INFO] exposure_time_us<-{exposure_us}")
  *         else:
  *             log(f"***no exposure_time_us setting detected")             # <<<<<<<<<<<<<<
  * 
  *         # configure gain
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_no_exposure_time_us_setting_det); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 294, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_no_exposure_time_us_setting_det); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 302, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "timedcapture/__init__.pyx":303
+  /* "timedcapture/__init__.pyx":311
  *             log(f"[INFO] gain<-{gain}")
  *         else:
  *             log(f"***no gain setting detected")             # <<<<<<<<<<<<<<
  * 
  *         # capture
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_u_no_gain_setting_detected); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_u_no_gain_setting_detected); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "timedcapture/__init__.pyx":307
+  /* "timedcapture/__init__.pyx":315
  *         # capture
  *         buf  = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H') # struct format used
  *         log("[INFO] capture starting.")             # <<<<<<<<<<<<<<
  *         start_capture(device, buf)
  *         read_frame(device, True)
  */
-  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_starting); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_starting); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 315, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "timedcapture/__init__.pyx":310
+  /* "timedcapture/__init__.pyx":318
  *         start_capture(device, buf)
  *         read_frame(device, True)
  *         log("[INFO] read 1 frame.")             # <<<<<<<<<<<<<<
  *         outpath = Path("local/frame_func.png")
  *         if not outpath.parent.exists():
  */
-  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_kp_u_INFO_read_1_frame); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 310, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_kp_u_INFO_read_1_frame); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "timedcapture/__init__.pyx":311
+  /* "timedcapture/__init__.pyx":319
  *         read_frame(device, True)
  *         log("[INFO] read 1 frame.")
  *         outpath = Path("local/frame_func.png")             # <<<<<<<<<<<<<<
  *         if not outpath.parent.exists():
  *             outpath.parent.mkdir()
  */
-  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_u_local_frame_func_png); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 311, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_u_local_frame_func_png); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "timedcapture/__init__.pyx":315
+  /* "timedcapture/__init__.pyx":323
  *             outpath.parent.mkdir()
  *         imageio.imsave(str(outpath), buf)
  *         log("[INFO] saved the frame.")             # <<<<<<<<<<<<<<
  *         log("[INFO] capture ending.")
  *         stop_capture(device)
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_u_INFO_saved_the_frame); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_u_INFO_saved_the_frame); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "timedcapture/__init__.pyx":316
+  /* "timedcapture/__init__.pyx":324
  *         imageio.imsave(str(outpath), buf)
  *         log("[INFO] saved the frame.")
  *         log("[INFO] capture ending.")             # <<<<<<<<<<<<<<
  *         stop_capture(device)
  *     finally:
  */
-  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_ending); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_ending); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "timedcapture/__init__.pyx":330
+  /* "timedcapture/__init__.pyx":338
  *     import imageio
  *     from pathlib import Path
  *     log("---test_device---")             # <<<<<<<<<<<<<<
  *     log(f"[INFO] initializing a device: {path}")
  *     device = Device(path)
  */
-  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_kp_u_test_device); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_kp_u_test_device); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 338, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "timedcapture/__init__.pyx":333
+  /* "timedcapture/__init__.pyx":341
  *     log(f"[INFO] initializing a device: {path}")
  *     device = Device(path)
  *     log("[INFO] setting parameters")             # <<<<<<<<<<<<<<
  *     device.width = width
  *     device.height = height
  */
-  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_kp_u_INFO_setting_parameters); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_kp_u_INFO_setting_parameters); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
 
-  /* "timedcapture/__init__.pyx":340
+  /* "timedcapture/__init__.pyx":348
  *     device.gain = gain
  *     log(f"[INFO] width={device.width}, height={device.height}, exposure_us={device.exposure_us}, gain={device.gain}")
  *     log("[INFO] capture starting.")             # <<<<<<<<<<<<<<
  *     device.start_capture()
  *     log("[INFO] reading and saving 1 frame.")
  */
-  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_starting); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_starting); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
 
-  /* "timedcapture/__init__.pyx":342
+  /* "timedcapture/__init__.pyx":350
  *     log("[INFO] capture starting.")
  *     device.start_capture()
  *     log("[INFO] reading and saving 1 frame.")             # <<<<<<<<<<<<<<
  *     outpath = Path("local/frame_obj.png")
  *     if not outpath.parent.exists():
  */
-  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_u_INFO_reading_and_saving_1_frame); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_u_INFO_reading_and_saving_1_frame); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
 
-  /* "timedcapture/__init__.pyx":343
+  /* "timedcapture/__init__.pyx":351
  *     device.start_capture()
  *     log("[INFO] reading and saving 1 frame.")
  *     outpath = Path("local/frame_obj.png")             # <<<<<<<<<<<<<<
  *     if not outpath.parent.exists():
  *         outpath.parent.mkdir()
  */
-  __pyx_tuple__22 = PyTuple_Pack(1, __pyx_kp_u_local_frame_obj_png); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(1, __pyx_kp_u_local_frame_obj_png); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "timedcapture/__init__.pyx":346
+  /* "timedcapture/__init__.pyx":354
  *     if not outpath.parent.exists():
  *         outpath.parent.mkdir()
  *     imageio.imsave(str(outpath), device.read_frame(True))             # <<<<<<<<<<<<<<
  *     log("[INFO] capture ending.")
  *     device.stop_capture()
  */
-  __pyx_tuple__23 = PyTuple_Pack(1, Py_True); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_tuple__23 = PyTuple_Pack(1, Py_True); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
 
-  /* "timedcapture/__init__.pyx":347
+  /* "timedcapture/__init__.pyx":355
  *         outpath.parent.mkdir()
  *     imageio.imsave(str(outpath), device.read_frame(True))
  *     log("[INFO] capture ending.")             # <<<<<<<<<<<<<<
  *     device.stop_capture()
  */
-  __pyx_tuple__24 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_ending); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_tuple__24 = PyTuple_Pack(1, __pyx_kp_u_INFO_capture_ending); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
 
@@ -25373,29 +25565,29 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__53);
   __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_timedcapture___init___pyx, __pyx_n_s_log, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 108, __pyx_L1_error)
 
-  /* "timedcapture/__init__.pyx":254
- *             ccapture.capture_format_dealloc(self.format)
+  /* "timedcapture/__init__.pyx":262
+ *         self.close()
  * 
  * def test_calls(path="/dev/video0",             # <<<<<<<<<<<<<<
  *                uint16 width=640,
  *                uint16 height=480,
  */
-  __pyx_tuple__55 = PyTuple_Pack(14, __pyx_n_s_path, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_exposure_us, __pyx_n_s_gain, __pyx_n_s_imageio, __pyx_n_s_Path, __pyx_n_s_device, __pyx_n_s_format, __pyx_n_s_bpath, __pyx_n_s_path_cstr, __pyx_n_s_cause, __pyx_n_s_buf, __pyx_n_s_outpath); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 254, __pyx_L1_error)
+  __pyx_tuple__55 = PyTuple_Pack(14, __pyx_n_s_path, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_exposure_us, __pyx_n_s_gain, __pyx_n_s_imageio, __pyx_n_s_Path, __pyx_n_s_device, __pyx_n_s_format, __pyx_n_s_bpath, __pyx_n_s_path_cstr, __pyx_n_s_cause, __pyx_n_s_buf, __pyx_n_s_outpath); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__55);
   __Pyx_GIVEREF(__pyx_tuple__55);
-  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(5, 0, 14, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_timedcapture___init___pyx, __pyx_n_s_test_calls_2, 254, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 254, __pyx_L1_error)
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(5, 0, 14, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_timedcapture___init___pyx, __pyx_n_s_test_calls_2, 262, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 262, __pyx_L1_error)
 
-  /* "timedcapture/__init__.pyx":323
+  /* "timedcapture/__init__.pyx":331
  *         ccapture.capture_device_dealloc(device)
  * 
  * def test_device(path="/dev/video0",             # <<<<<<<<<<<<<<
  *                uint16 width=640,
  *                uint16 height=480,
  */
-  __pyx_tuple__57 = PyTuple_Pack(9, __pyx_n_s_path, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_exposure_us, __pyx_n_s_gain, __pyx_n_s_imageio, __pyx_n_s_Path, __pyx_n_s_device, __pyx_n_s_outpath); if (unlikely(!__pyx_tuple__57)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_tuple__57 = PyTuple_Pack(9, __pyx_n_s_path, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_exposure_us, __pyx_n_s_gain, __pyx_n_s_imageio, __pyx_n_s_Path, __pyx_n_s_device, __pyx_n_s_outpath); if (unlikely(!__pyx_tuple__57)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__57);
   __Pyx_GIVEREF(__pyx_tuple__57);
-  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(5, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_timedcapture___init___pyx, __pyx_n_s_test_device_2, 323, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(5, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_timedcapture___init___pyx, __pyx_n_s_test_device_2, 331, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 331, __pyx_L1_error)
 
   /* "View.MemoryView":284
  *         return self.name
@@ -25472,7 +25664,6 @@ static int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_26862081 = PyInt_FromLong(26862081L); if (unlikely(!__pyx_int_26862081)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_184977713 = PyInt_FromLong(184977713L); if (unlikely(!__pyx_int_184977713)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_neg_1 = PyInt_FromLong(-1); if (unlikely(!__pyx_int_neg_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
@@ -25703,28 +25894,28 @@ PyMODINIT_FUNC PyInit_timedcapture(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_log, __pyx_t_3) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "timedcapture/__init__.pyx":254
- *             ccapture.capture_format_dealloc(self.format)
+  /* "timedcapture/__init__.pyx":262
+ *         self.close()
  * 
  * def test_calls(path="/dev/video0",             # <<<<<<<<<<<<<<
  *                uint16 width=640,
  *                uint16 height=480,
  */
-  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_12timedcapture_8__init___3test_calls, NULL, __pyx_n_s_timedcapture___init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 254, __pyx_L1_error)
+  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_12timedcapture_8__init___3test_calls, NULL, __pyx_n_s_timedcapture___init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test_calls_2, __pyx_t_3) < 0) __PYX_ERR(0, 254, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test_calls_2, __pyx_t_3) < 0) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "timedcapture/__init__.pyx":323
+  /* "timedcapture/__init__.pyx":331
  *         ccapture.capture_device_dealloc(device)
  * 
  * def test_device(path="/dev/video0",             # <<<<<<<<<<<<<<
  *                uint16 width=640,
  *                uint16 height=480,
  */
-  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_12timedcapture_8__init___5test_device, NULL, __pyx_n_s_timedcapture___init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_12timedcapture_8__init___5test_device, NULL, __pyx_n_s_timedcapture___init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test_device_2, __pyx_t_3) < 0) __PYX_ERR(0, 323, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test_device_2, __pyx_t_3) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "timedcapture/__init__.pyx":1
@@ -26779,6 +26970,80 @@ static CYTHON_INLINE void __Pyx_ExceptionSwap(PyObject **type, PyObject **value,
 }
 #endif
 
+/* Import */
+      static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
+    PyObject *empty_list = 0;
+    PyObject *module = 0;
+    PyObject *global_dict = 0;
+    PyObject *empty_dict = 0;
+    PyObject *list;
+    #if PY_VERSION_HEX < 0x03030000
+    PyObject *py_import;
+    py_import = __Pyx_PyObject_GetAttrStr(__pyx_b, __pyx_n_s_import);
+    if (!py_import)
+        goto bad;
+    #endif
+    if (from_list)
+        list = from_list;
+    else {
+        empty_list = PyList_New(0);
+        if (!empty_list)
+            goto bad;
+        list = empty_list;
+    }
+    global_dict = PyModule_GetDict(__pyx_m);
+    if (!global_dict)
+        goto bad;
+    empty_dict = PyDict_New();
+    if (!empty_dict)
+        goto bad;
+    {
+        #if PY_MAJOR_VERSION >= 3
+        if (level == -1) {
+            if (strchr(__Pyx_MODULE_NAME, '.')) {
+                #if PY_VERSION_HEX < 0x03030000
+                PyObject *py_level = PyInt_FromLong(1);
+                if (!py_level)
+                    goto bad;
+                module = PyObject_CallFunctionObjArgs(py_import,
+                    name, global_dict, empty_dict, list, py_level, NULL);
+                Py_DECREF(py_level);
+                #else
+                module = PyImport_ImportModuleLevelObject(
+                    name, global_dict, empty_dict, list, 1);
+                #endif
+                if (!module) {
+                    if (!PyErr_ExceptionMatches(PyExc_ImportError))
+                        goto bad;
+                    PyErr_Clear();
+                }
+            }
+            level = 0;
+        }
+        #endif
+        if (!module) {
+            #if PY_VERSION_HEX < 0x03030000
+            PyObject *py_level = PyInt_FromLong(level);
+            if (!py_level)
+                goto bad;
+            module = PyObject_CallFunctionObjArgs(py_import,
+                name, global_dict, empty_dict, list, py_level, NULL);
+            Py_DECREF(py_level);
+            #else
+            module = PyImport_ImportModuleLevelObject(
+                name, global_dict, empty_dict, list, level);
+            #endif
+        }
+    }
+bad:
+    #if PY_VERSION_HEX < 0x03030000
+    Py_XDECREF(py_import);
+    #endif
+    Py_XDECREF(empty_list);
+    Py_XDECREF(empty_dict);
+    return module;
+}
+
 /* IsLittleEndian */
       static CYTHON_INLINE int __Pyx_Is_Little_Endian(void)
 {
@@ -27471,100 +27736,12 @@ static CYTHON_INLINE void __Pyx_XDEC_MEMVIEW(__Pyx_memviewslice *memslice,
     }
 }
 
-/* Import */
-        static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
-    PyObject *empty_list = 0;
-    PyObject *module = 0;
-    PyObject *global_dict = 0;
-    PyObject *empty_dict = 0;
-    PyObject *list;
-    #if PY_VERSION_HEX < 0x03030000
-    PyObject *py_import;
-    py_import = __Pyx_PyObject_GetAttrStr(__pyx_b, __pyx_n_s_import);
-    if (!py_import)
-        goto bad;
-    #endif
-    if (from_list)
-        list = from_list;
-    else {
-        empty_list = PyList_New(0);
-        if (!empty_list)
-            goto bad;
-        list = empty_list;
-    }
-    global_dict = PyModule_GetDict(__pyx_m);
-    if (!global_dict)
-        goto bad;
-    empty_dict = PyDict_New();
-    if (!empty_dict)
-        goto bad;
-    {
-        #if PY_MAJOR_VERSION >= 3
-        if (level == -1) {
-            if (strchr(__Pyx_MODULE_NAME, '.')) {
-                #if PY_VERSION_HEX < 0x03030000
-                PyObject *py_level = PyInt_FromLong(1);
-                if (!py_level)
-                    goto bad;
-                module = PyObject_CallFunctionObjArgs(py_import,
-                    name, global_dict, empty_dict, list, py_level, NULL);
-                Py_DECREF(py_level);
-                #else
-                module = PyImport_ImportModuleLevelObject(
-                    name, global_dict, empty_dict, list, 1);
-                #endif
-                if (!module) {
-                    if (!PyErr_ExceptionMatches(PyExc_ImportError))
-                        goto bad;
-                    PyErr_Clear();
-                }
-            }
-            level = 0;
-        }
-        #endif
-        if (!module) {
-            #if PY_VERSION_HEX < 0x03030000
-            PyObject *py_level = PyInt_FromLong(level);
-            if (!py_level)
-                goto bad;
-            module = PyObject_CallFunctionObjArgs(py_import,
-                name, global_dict, empty_dict, list, py_level, NULL);
-            Py_DECREF(py_level);
-            #else
-            module = PyImport_ImportModuleLevelObject(
-                name, global_dict, empty_dict, list, level);
-            #endif
-        }
-    }
-bad:
-    #if PY_VERSION_HEX < 0x03030000
-    Py_XDECREF(py_import);
-    #endif
-    Py_XDECREF(empty_list);
-    Py_XDECREF(empty_dict);
-    return module;
-}
-
 /* None */
         static CYTHON_INLINE long __Pyx_div_long(long a, long b) {
     long q = a / b;
     long r = a - q*b;
     q -= ((r != 0) & ((r ^ b) < 0));
     return q;
-}
-
-/* ImportFrom */
-        static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name) {
-    PyObject* value = __Pyx_PyObject_GetAttrStr(module, name);
-    if (unlikely(!value) && PyErr_ExceptionMatches(PyExc_AttributeError)) {
-        PyErr_Format(PyExc_ImportError,
-        #if PY_MAJOR_VERSION < 3
-            "cannot import name %.230s", PyString_AS_STRING(name));
-        #else
-            "cannot import name %S", name);
-        #endif
-    }
-    return value;
 }
 
 /* PyCFunctionFastCall */
@@ -27790,6 +27967,20 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func) {
     return __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL);
 }
 #endif
+
+/* ImportFrom */
+          static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name) {
+    PyObject* value = __Pyx_PyObject_GetAttrStr(module, name);
+    if (unlikely(!value) && PyErr_ExceptionMatches(PyExc_AttributeError)) {
+        PyErr_Format(PyExc_ImportError,
+        #if PY_MAJOR_VERSION < 3
+            "cannot import name %.230s", PyString_AS_STRING(name));
+        #else
+            "cannot import name %S", name);
+        #endif
+    }
+    return value;
+}
 
 /* RaiseTooManyValuesToUnpack */
           static CYTHON_INLINE void __Pyx_RaiseTooManyValuesError(Py_ssize_t expected) {
@@ -28739,8 +28930,8 @@ __pyx_capsule_create(void *p, CYTHON_UNUSED const char *sig)
     }
 
 /* FromPyCTupleUtility */
-          static __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_convert__from_py___pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc(PyObject * o) {
-    __pyx_ctuple_8b8c2____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc result;
+          static __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc __pyx_convert__from_py___pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc(PyObject * o) {
+    __pyx_ctuple_b950b____dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__and___dunderpyx_t_12timedcapture_8__dunderinit__dunder_uint16__etc result;
     if (!PyTuple_Check(o) || PyTuple_GET_SIZE(o) != 2) {
         PyErr_Format(PyExc_TypeError, "Expected %.16s of size %d, got %.200s", "a tuple", 2, Py_TYPE(o)->tp_name);
         goto bad;

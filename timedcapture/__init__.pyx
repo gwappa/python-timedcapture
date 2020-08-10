@@ -47,6 +47,23 @@ DEF EXT_GAIN_MANUAL          = 0
 ctypedef np_c.npy_uint16 uint16
 ctypedef np_c.npy_uint32 uint32
 ctypedef np_c.npy_int32  int32
+ctypedef np_c.npy_int64  int64
+
+cdef extern from "<sys/time.h>":
+    struct timeval:
+        int64 tv_sec
+        int64 tv_usec
+
+    struct timezone:
+        pass
+
+    int gettimeofday(timeval *tv, timezone *tz)
+
+def timestamp():
+    cdef timeval tv
+    cdef timezone* tz = NULL
+    gettimeofday(&tv, tz)
+    return float(tv.tv_sec) + float(tv.tv_usec)/1000000
 
 cdef cstring_to_str(char* s):
     cdef bytes bs = bytes(s)

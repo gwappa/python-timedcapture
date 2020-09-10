@@ -87,6 +87,7 @@ Device* capture_device_init()
         return NULL;
     }
     memset(dev, 0, sizeof(Device));
+    dev->triggered        = false;
     dev->input_buffer_num = DEFAULT_BUFFER_NUM;
     dev->fd = -1;
     dev->status = DeviceIsNotAvailable;
@@ -187,7 +188,7 @@ int capture_open(Device* device, const char* path)
     }
 
 #ifdef DEBUG
-    fprintf(stderr, "[DEBUG] successfully validated device capatility.\n");
+    fprintf(stderr, "[DEBUG] successfully validated device capability.\n");
 #endif
 
     return Success;
@@ -434,6 +435,29 @@ int capture_set_control(Device* device,
     return Success;
 }
 
+int capture_is_triggerable(Device* device, bool* out)
+{
+    return capture_has_control(device, EXT_CID_TRIGGER_MODE, out);
+}
+
+int capture_is_triggered(Device* device, bool* triggered)
+{
+    int status = 0;
+    int ret    = capture_get_control(device, EXT_CID_TRIGGER_MODE, &status);
+    *triggered = status? true: false;
+    device->triggered = *triggered;
+    return ret;
+}
+
+int capture_set_triggered(Device* device, bool triggered)
+{
+    int ret = capture_set_control( device, EXT_CID_TRIGGER_MODE, (triggered? 1 : 0) );
+    if (ret == Success) {
+        device->triggered = triggered;
+    }
+    return ret;
+}
+
 int capture_start(Device* device, uint16_t* buffer)
 {
     switch(device->status)
@@ -580,7 +604,7 @@ bool capture_is_running(Device* device)
     return (device->status == DeviceIsCapturing);
 }
 
-int capture_read(Device* device, const bool read_unbuffered)
+int capture_read(Device* device, const bool software_trigger, const bool read_unbuffered)
 {
     switch(device->status)
     {
@@ -611,6 +635,25 @@ int capture_read(Device* device, const bool read_unbuffered)
             device->error_code = errno;
             strcpy(device->error_cause, "failed to re-queue input buffer");
             return Failure;
+        }
+
+        if (device->triggered && software_trigger) {
+            // generate software trigger
+            // note, in this condition, the device must respond to EXT_CID_SOFTWARE_TRIGGER
+
+            struct v4l2_control trig;
+            memset(&trig, 0, sizeof(trig));
+            trig.id    = EXT_CID_SOFTWARE_TRIGGER;
+            trig.value = 1; // but can be anything
+            if (ioctl(device->fd, VIDIOC_S_CTRL, &trig))
+            {
+                device->error_code = errno;
+                snprintf(device->error_cause,
+                         MAX_CAUSE_LENGTH,
+                         "failed to generate a software trigger (CID: %x)",
+                         EXT_CID_SOFTWARE_TRIGGER);
+                return Failure;
+            }
         }
 
 #ifdef DEBUG

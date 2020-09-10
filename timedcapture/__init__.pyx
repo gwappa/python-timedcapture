@@ -95,6 +95,16 @@ cdef has_control(ccapture.Device* device, uint32 cid):
     ccapture.capture_has_control(device, cid, &avail)
     return bool(avail)
 
+cdef is_triggered(ccapture.Device* device):
+    cdef bool_t status
+    if ccapture.capture_is_triggered(device, &status) != 0:
+        raise RuntimeError(format_error_message(device))
+    return bool(status)
+
+cdef set_triggered(ccapture.Device* device, bool_t triggered):
+    if ccapture.capture_set_triggered(device, triggered) != 0:
+        raise RuntimeError(format_error_message(device))
+
 cdef set_format(ccapture.Device* device, ccapture.Format* format):
     if ccapture.capture_set_format(device, format) != 0:
         raise RuntimeError(format_error_message(device))
@@ -111,9 +121,11 @@ cdef start_capture(ccapture.Device* device, uint16[:,:] buffer=None):
         if ccapture.capture_start(device, &buffer[0,0]) != 0:
             raise RuntimeError(format_error_message(device))
 
-cdef read_frame(ccapture.Device* device, bool_t read_unbuffered=False):
+cdef read_frame(ccapture.Device* device,
+                bool_t software_trigger=True,
+                bool_t read_unbuffered=False):
     with nogil:
-        if ccapture.capture_read(device, read_unbuffered) != 0:
+        if ccapture.capture_read(device, software_trigger, read_unbuffered) != 0:
             ccapture.capture_stop(device)
             with gil:
                 raise RuntimeError(format_error_message(device))
@@ -241,6 +253,14 @@ cdef class Device:
     def gain(self, int32 gain):
         self.write_control_value(V4L2_CID_GAIN, gain, "gain")
 
+    @property
+    def triggered(self):
+        return is_triggered(self.device)
+
+    @triggered.setter
+    def triggered(self, bool_t triggered):
+        set_triggered(self.device, triggered)
+
     cdef int32 read_control_value(self, uint32 cid, str label):
         if has_control(self.device, cid) == True:
             return get_control(self.device, cid)
@@ -256,8 +276,11 @@ cdef class Device:
     def start_capture(self):
         start_capture(self.device, self.buffer)
 
-    def read_frame(self, bool_t read_unbuffered=False, bool_t copy=False):
-        read_frame(self.device, read_unbuffered)
+    def read_frame(self,
+                   bool_t software_trigger=True,
+                   bool_t read_unbuffered=False,
+                   bool_t copy=False):
+        read_frame(self.device, software_trigger, read_unbuffered)
         return np.array(self.buffer, copy=copy)
 
     def stop_capture(self):

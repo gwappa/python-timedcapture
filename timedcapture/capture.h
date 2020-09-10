@@ -31,6 +31,9 @@
  #define MAX_CAUSE_LENGTH 256
  #define LENGTH_FOURCC 5
 
+ #define EXT_CID_TRIGGER_MODE     0x0199e208
+ #define EXT_CID_SOFTWARE_TRIGGER 0x0199e209
+
  // default input buffer size
  #define DEFAULT_BUFFER_NUM 1
 
@@ -48,6 +51,7 @@
       * current state of this Device.
       */
      DeviceState status;
+     bool        triggered;
 
      /**
       * info of the device associated with this Device.
@@ -169,6 +173,24 @@ int capture_get_control(Device* device,
                         int32_t* value);
 
 /**
+ *  queries whether the device can be externally triggered.
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_is_triggerable(Device* device, bool* out);
+
+/**
+ *  retrieves the current trigger mode (false for free-running, true for triggered).
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_is_triggered(Device* device, bool* triggered);
+
+/**
+ *  updates the trigger mode to free-running (false) or triggered (true).
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_set_triggered(Device *device, bool triggered);
+
+/**
  *  sets up the input buffer (with the number specified in `input_buffer_num`)
  *  and starts capturing frames.
  *  returns Success (0) on success, and Failure (-1) otherwise.
@@ -185,7 +207,7 @@ bool capture_is_running(Device* device);
  *  if `read_unbuffered` is set, it waits until the frame is acquired after this function call.
  *  returns Success (0) on success, and Failure (-1) otherwise.
  */
-int capture_read(Device* device, const bool read_unbuffered); // blocks
+int capture_read(Device* device, const bool software_trigger, const bool read_unbuffered); // blocks
 
 /**
  *  stops capturing frames, and deallocates buffers.

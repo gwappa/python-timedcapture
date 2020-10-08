@@ -458,6 +458,24 @@ int capture_set_triggered(Device* device, bool triggered)
     return ret;
 }
 
+int capture_has_strobe(Device* device, bool* out)
+{
+    return capture_has_control(device, EXT_CID_STROBE_ENABLE, out);
+}
+
+int capture_get_strobe_enabled(Device* device, bool* enabled)
+{
+    int status = 0;
+    int ret    = capture_get_control(device, EXT_CID_STROBE_ENABLE, &status);
+    *enabled   = status? true: false;
+    return ret;
+}
+
+int capture_set_strobe_enabled(Device* device, bool enabled)
+{
+    return capture_set_control(device, EXT_CID_STROBE_ENABLE, (enabled? 1:0));
+}
+
 int capture_start(Device* device, uint16_t* buffer)
 {
     switch(device->status)

@@ -44,6 +44,8 @@ DEF V4L2_CID_GAIN            = 0x00980913
 DEF EXT_CID_GAIN_AUTO        = 0x0199e205
 DEF EXT_GAIN_MANUAL          = 0
 
+DEF EXT_CID_STROBE_ENABLE    = 0x0199e211
+
 ctypedef np_c.npy_uint16 uint16
 ctypedef np_c.npy_uint32 uint32
 ctypedef np_c.npy_int32  int32
@@ -107,6 +109,16 @@ cdef set_triggered(ccapture.Device* device, bool_t triggered):
 
 cdef set_format(ccapture.Device* device, ccapture.Format* format):
     if ccapture.capture_set_format(device, format) != 0:
+        raise RuntimeError(format_error_message(device))
+
+cdef get_strobe_enabled(ccapture.Device* device):
+    cdef bool_t status
+    if ccapture.capture_get_strobe_enabled(device, &status) != 0:
+        raise RuntimeError(format_error_message(device))
+    return bool(status)
+
+cdef set_strobe_enabled(ccapture.Device* device, bool_t enabled):
+    if ccapture.capture_set_strobe_enabled(device, enabled) != 0:
         raise RuntimeError(format_error_message(device))
 
 cdef get_format(ccapture.Device* device, ccapture.Format* format):
@@ -260,6 +272,20 @@ cdef class Device:
     @triggered.setter
     def triggered(self, bool_t triggered):
         set_triggered(self.device, triggered)
+
+    @property
+    def strobe(self):
+        if has_control(self.device, EXT_CID_STROBE_ENABLE) == True:
+            return get_strobe_enabled(self.device)
+        else:
+            return None
+
+    @strobe.setter
+    def strobe(self, bool_t enabled):
+        if has_control(self.device, EXT_CID_STROBE_ENABLE) == True:
+            set_strobe_enabled(self.device, enabled)
+        else:
+            pass
 
     cdef int32 read_control_value(self, uint32 cid, str label):
         if has_control(self.device, cid) == True:

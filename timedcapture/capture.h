@@ -33,6 +33,7 @@
 
  #define EXT_CID_TRIGGER_MODE     0x0199e208
  #define EXT_CID_SOFTWARE_TRIGGER 0x0199e209
+ #define EXT_CID_STROBE_ENABLE    0x0199e211
 
  // default input buffer size
  #define DEFAULT_BUFFER_NUM 1
@@ -189,6 +190,24 @@ int capture_is_triggered(Device* device, bool* triggered);
  *  returns Success (0) on success, and Failure (-1) otherwise.
  */
 int capture_set_triggered(Device *device, bool triggered);
+
+/**
+ *  queries whether the device has STROBE_ENABLE control.
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_has_strobe(Device* device, bool* out);
+
+/**
+ *  retrieves the current strobe mode (false for disabled, true for enabled).
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_get_strobe_enabled(Device* device, bool* enabled);
+
+/**
+ *  updates the strobe mode to enabled (true) or disabled (false).
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_set_strobe_enabled(Device* device, bool enabled);
 
 /**
  *  sets up the input buffer (with the number specified in `input_buffer_num`)

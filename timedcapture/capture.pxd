@@ -73,8 +73,12 @@ cdef extern from "capture.h":
     int     capture_is_triggered(Device* device, bint* triggered) nogil
     int     capture_set_triggered(Device* device, const bint triggered) nogil
 
-    int     capture_start(Device *device, uint16* buffer)
-    bool_t  capture_is_running(Device* device)
+    int     capture_has_strobe(Device* device, bint* out) nogil
+    int     capture_get_strobe_enabled(Device* device, bint* enabled) nogil
+    int     capture_set_strobe_enabled(Device* device, const bint triggered) nogil
+
+    int     capture_start(Device *device, uint16* buffer) nogil
+    bool_t  capture_is_running(Device* device) nogil
     int     capture_read(Device* device,
                          const bool_t software_trigger,
                          const bool_t read_unbuffered) nogil

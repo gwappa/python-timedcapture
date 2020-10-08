@@ -219,8 +219,7 @@ cdef class Device:
 
     @width.setter
     def width(self, uint16 width):
-        self.format.width = width
-        set_format(self.device, self.format)
+        self.size = (width, self.format.height)
 
     @property
     def height(self):
@@ -229,8 +228,7 @@ cdef class Device:
 
     @height.setter
     def height(self, uint16 height):
-        self.format.height = height
-        set_format(self.device, self.format)
+        self.size = (self.format.width, height)
 
     @property
     def size(self):
@@ -242,6 +240,8 @@ cdef class Device:
         self.format.width  = width_height[0]
         self.format.height = width_height[1]
         set_format(self.device, self.format)
+        width, height = self.size
+        self.buffer = cythonarray(shape=(height,width), itemsize=sizeof(uint16), format='H')
 
     @property
     def exposure_us(self):

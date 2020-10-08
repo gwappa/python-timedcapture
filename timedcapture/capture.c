@@ -517,22 +517,36 @@ int capture_start(Device* device, uint16_t* buffer)
         strcpy(device->error_cause, "cannot allocate driver-side buffer");
         return Failure;
     }
+
+    if (buffer == NULL) {
 #ifdef DEBUG
-    fprintf(stderr, "[DEBUG] setting up capturing:\n");
+        fprintf(stderr, "[DEBUG] prepare internal-storage buffer (%dx%d)...",
+                device->image_width, device->image_height);
+#endif
+        device->stored       = (uint16_t *)malloc(sizeof(uint16_t)
+                                                  * (device->image_width)
+                                                  * (device->image_height));
+        device->store_extern = false;
+#ifdef DEBUG
+        fprintf(stderr, "done.\n");
+#endif
+    } else {
+#ifdef DEBUG
+        fprintf(stderr, "[DEBUG] set up externally-prepared buffer as the storage (%dx%d).\n",
+                device->image_width, device->image_height);
+#endif
+        device->stored       = buffer;
+        device->store_extern = true;
+    }
+
+#ifdef DEBUG
+    fprintf(stderr, "[DEBUG] setting up %d buffers of %dx%d:\n",
+            device->input_buffer_num, device->image_width, device->image_height);
 #endif
 
     // 3/5. prepare buffer address storage
     device->input_buffer      = (void **)malloc(sizeof(void *) * device->input_buffer_num);
     device->input_buffer_size = (uint32_t *)malloc(sizeof(uint32_t) * device->input_buffer_num);
-    if (buffer == NULL) {
-        device->stored       = (uint16_t *)malloc(sizeof(uint16_t)
-                                                  * (device->image_width)
-                                                  * (device->image_height));
-        device->store_extern = false;
-    } else {
-        device->stored       = buffer;
-        device->store_extern = true;
-    }
     device->input_buffer_info = malloc(sizeof(struct v4l2_buffer));
 
     // 4/5. mmap buffer info

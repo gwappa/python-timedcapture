@@ -336,7 +336,7 @@ cdef class Device:
     def start_capture(self):
         start_capture(self.device, self.buffer)
 
-    def fire_trigger(self):
+    def fire_software_trigger(self):
         fire_software_trigger(self.device)
 
     def read_frame(self,

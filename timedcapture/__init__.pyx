@@ -207,6 +207,23 @@ cdef class Device:
             import sys
             print(f"***{path}: control 'exposure_time_us' not found",
                   file=sys.stdout, flush=True)
+    def _reopen(self):
+        """close the device once, and reopen it."""
+        # close device
+        if ccapture.capture_is_open(self.device) == True:
+            if ccapture.capture_is_running(self.device) == True:
+                ccapture.capture_stop(self.device)
+            ccapture.capture_close(self.device)
+        ccapture.capture_device_dealloc(self.device)
+        # open device
+        try:
+            open_device(self.device, self.path_str)
+        except RuntimeError as e:
+            ccapture.capture_device_dealloc(self.device)
+            self.device = NULL
+            ccapture.capture_format_dealloc(self.format)
+            self.format = NULL
+            raise e
 
     @property
     def path(self):
@@ -237,6 +254,10 @@ cdef class Device:
 
     @size.setter
     def size(self, (uint16, uint16) width_height):
+        # since (at least in the case of ImagingSource cameras)
+        # the camera does not accept frame size changes after grab once started,
+        # it closes the device once and then re-opens it.
+        self._reopen()
         self.format.width  = width_height[0]
         self.format.height = width_height[1]
         set_format(self.device, self.format)

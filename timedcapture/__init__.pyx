@@ -160,6 +160,7 @@ cdef class Device:
     cdef str              path_str
     cdef uint16[:,:]      buffer
     cdef bool_t           has_exp_us
+    cdef bool_t           _device_used
 
     def __cinit__(self,
                   str path="/dev/video0",
@@ -185,6 +186,7 @@ cdef class Device:
             self.format = NULL
             raise e
         self.path_str = path
+        self._device_used = False
 
         # configure format and buffer
         self.format.width  = width
@@ -211,6 +213,7 @@ cdef class Device:
             import sys
             print(f"***{path}: control 'exposure_time_us' not found",
                   file=sys.stdout, flush=True)
+
     def _reopen(self):
         """close the device once, and reopen it."""
         # close device
@@ -261,7 +264,8 @@ cdef class Device:
         # since (at least in the case of ImagingSource cameras)
         # the camera does not accept frame size changes after grab once started,
         # it closes the device once and then re-opens it.
-        self._reopen()
+        if self._device_used == True:
+            self._reopen()
         self.format.width  = width_height[0]
         self.format.height = width_height[1]
         set_format(self.device, self.format)
@@ -335,6 +339,7 @@ cdef class Device:
 
     def start_capture(self):
         start_capture(self.device, self.buffer)
+        self._device_used = True
 
     def fire_software_trigger(self):
         fire_software_trigger(self.device)

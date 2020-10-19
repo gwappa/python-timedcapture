@@ -222,6 +222,12 @@ int capture_start(Device* device, uint16_t* buffer);
 bool capture_is_running(Device* device);
 
 /**
+ *  fires a software trigger.
+ *  returns Success (0) on success, and Failure (-1) otherwise.
+ */
+int capture_fire_software_trigger(Device* device);
+
+/**
  *  waits until a frame is read and copies it into `stored`.
  *  if `read_unbuffered` is set, it waits until the frame is acquired after this function call.
  *  returns Success (0) on success, and Failure (-1) otherwise.

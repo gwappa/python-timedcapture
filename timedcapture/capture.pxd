@@ -79,6 +79,7 @@ cdef extern from "capture.h":
 
     int     capture_start(Device *device, uint16* buffer) nogil
     bool_t  capture_is_running(Device* device) nogil
+    int     capture_fire_software_trigger(Device* device) nogil
     int     capture_read(Device* device,
                          const bool_t software_trigger,
                          const bool_t read_unbuffered) nogil

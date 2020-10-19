@@ -636,6 +636,27 @@ bool capture_is_running(Device* device)
     return (device->status == DeviceIsCapturing);
 }
 
+int capture_fire_software_trigger(Device* device)
+{
+    // generate software trigger
+    // note, in this condition, the device must respond to EXT_CID_SOFTWARE_TRIGGER
+
+    struct v4l2_control trig;
+    memset(&trig, 0, sizeof(trig));
+    trig.id    = EXT_CID_SOFTWARE_TRIGGER;
+    trig.value = 1; // but can be anything
+    if (ioctl(device->fd, VIDIOC_S_CTRL, &trig))
+    {
+        device->error_code = errno;
+        snprintf(device->error_cause,
+                 MAX_CAUSE_LENGTH,
+                 "failed to generate a software trigger (CID: %x)",
+                 EXT_CID_SOFTWARE_TRIGGER);
+        return Failure;
+    }
+    return Success;
+}
+
 int capture_read(Device* device, const bool software_trigger, const bool read_unbuffered)
 {
     switch(device->status)
@@ -669,23 +690,10 @@ int capture_read(Device* device, const bool software_trigger, const bool read_un
             return Failure;
         }
 
-        if (device->triggered && software_trigger) {
-            // generate software trigger
-            // note, in this condition, the device must respond to EXT_CID_SOFTWARE_TRIGGER
-
-            struct v4l2_control trig;
-            memset(&trig, 0, sizeof(trig));
-            trig.id    = EXT_CID_SOFTWARE_TRIGGER;
-            trig.value = 1; // but can be anything
-            if (ioctl(device->fd, VIDIOC_S_CTRL, &trig))
-            {
-                device->error_code = errno;
-                snprintf(device->error_cause,
-                         MAX_CAUSE_LENGTH,
-                         "failed to generate a software trigger (CID: %x)",
-                         EXT_CID_SOFTWARE_TRIGGER);
-                return Failure;
-            }
+        // generate a software trigger (in case it is requested)
+        if (device->triggered && software_trigger
+            && (capture_fire_software_trigger(device) != Success)) {
+            return Failure;
         }
 
 #ifdef DEBUG

@@ -133,6 +133,10 @@ cdef start_capture(ccapture.Device* device, uint16[:,:] buffer=None):
         if ccapture.capture_start(device, &buffer[0,0]) != 0:
             raise RuntimeError(format_error_message(device))
 
+cdef fire_software_trigger(ccapture.Device* device):
+    if ccapture.capture_fire_software_trigger(device) != 0:
+        raise RuntimeError(format_error_message(device))
+
 cdef read_frame(ccapture.Device* device,
                 bool_t software_trigger=True,
                 bool_t read_unbuffered=False):
@@ -287,6 +291,15 @@ cdef class Device:
         self.write_control_value(V4L2_CID_GAIN, gain, "gain")
 
     @property
+    def nb_buffer(self):
+        """number of input buffer on the driver"""
+        return self.device.input_buffer_num
+
+    @nb_buffer.setter
+    def nb_buffer(self, uint16 value):
+        self.device.input_buffer_num = value
+
+    @property
     def triggered(self):
         return is_triggered(self.device)
 
@@ -322,6 +335,9 @@ cdef class Device:
 
     def start_capture(self):
         start_capture(self.device, self.buffer)
+
+    def fire_trigger(self):
+        fire_software_trigger(self.device)
 
     def read_frame(self,
                    bool_t software_trigger=True,

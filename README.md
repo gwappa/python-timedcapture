@@ -1,5 +1,7 @@
 # timedcapture
 
+[![DOI](https://zenodo.org/badge/267508414.svg)](https://zenodo.org/badge/latestdoi/267508414)
+
 a cython-based module to achieve on-time video capture through V4L2.
 
 For a general usage, refer to [USAGE](https://github.com/gwappa/python-timedcapture/blob/master/USAGE.md).
@@ -29,7 +31,17 @@ You will need a working Cython and Numpy combination **pre-installed**.
 $ pip install numpy>=1.19 cython>=0.29 # or: "conda install numpy cython", in case you use Anaconda
 $ pip install timedcapture
 ```
+Alternatively, you can visit our [releases page](https://github.com/gwappa/python-timedcapture/releases)
+and download the x86_64 binary wheel.
+
+You can install it via:
+
+```bash
+$ pip install timedcapture-<version...>.whl
+```
 
 ## License
 
 2020 Keisuke Sehara, the MIT License.
+
+You can cite `timedcapture` by using the DOI: https://doi.org/10.5281/zenodo.4459207

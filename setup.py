@@ -26,7 +26,7 @@ import setuptools
 from Cython.Build import cythonize
 import numpy as np
 
-VERSION_STR = "0.3.1"
+VERSION_STR = "0.3.2"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -47,8 +47,8 @@ setuptools.setup(
     author='Keisuke Sehara',
     author_email='keisuke.sehara@gmail.com',
     license='MIT',
-    install_requires=[ "numpy" ],
-    python_requires='>=3',
+    install_requires=[ "numpy>=1.19", "cython>=0.29" ],
+    python_requires='>=3.6',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
@@ -59,5 +59,7 @@ setuptools.setup(
         'Topic :: Multimedia :: Video :: Capture',
         ],
     ext_modules=cythonize(extensions),
-    zip_safe=False
+    packages=setuptools.find_packages(),
+    include_package_data=True,
+    zip_safe=False,
 )

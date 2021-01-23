@@ -1,6 +1,6 @@
-# timedcapture: Usage guide
+# Usage guide: timedcapture
 
-## the Device class
+## The Device class
 
 **IMPORTANT NOTE**: the current implementation only allows 16-bit grayscale acquisition.
 
@@ -115,4 +115,3 @@ No matter the trigger mode, you can always enable the `strobe` output to monitor
 ### Buffering
 
 To enable your program to achieve a good closed-loop, on-time performance, you need to **set the number of frame buffer (i.e. `nb_buffer`) to 1**. Failing to so so will increase the total closed-loop latency as each `read_frame()` call will only return a frame that is a number of frames old.
-

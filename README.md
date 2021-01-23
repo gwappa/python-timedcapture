@@ -20,24 +20,13 @@ For a general usage, refer to [USAGE](https://github.com/gwappa/python-timedcapt
 
 ## Installation
 
+For the time being, we only provide the source distribution on PyPI.
+You will need a working Cython and Numpy combination **pre-installed**.
+
+```bash
+$ pip install numpy>=1.19 cython>=0.29 # or: "conda install numpy cython", in case you use Anaconda
+$ pip install timedcapture
 ```
-pip install timedcapture
-```
-
-For the time being, we only provide the binary for the `x86_64` architecture.
-To build it yourself, please refer to the section below.
-
-## Compile by yourself
-
-A working installation of Cython is required. Note that the recent versions of Cython requires Numpy over the version 1.17.
-
-Clone the repository, and then run at the repository root:
-
-```
-python setup.py bdist_wheel
-```
-
-A `.whl` file will be created in the `dist` directory, which you can then use as `pip install xxx.whl`.
 
 ## License
 

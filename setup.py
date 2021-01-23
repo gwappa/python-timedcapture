@@ -47,7 +47,7 @@ setuptools.setup(
     author='Keisuke Sehara',
     author_email='keisuke.sehara@gmail.com',
     license='MIT',
-    install_requires=[],
+    install_requires=[ "numpy" ],
     python_requires='>=3',
     classifiers=[
         'Development Status :: 3 - Alpha',

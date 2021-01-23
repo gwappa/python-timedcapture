@@ -32,7 +32,7 @@ import numpy as np
 cimport numpy as np_c
 cimport timedcapture.capture as ccapture
 
-DEBUG = True
+DEBUG = False
 
 DEF EXT_CID_EXPOSURE_TIME_US = 0x0199e201
 DEF V4L2_CID_EXPOSURE_AUTO   = 0x009a0901

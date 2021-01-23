@@ -20,6 +20,8 @@ For a general usage, refer to [USAGE](https://github.com/gwappa/python-timedcapt
 
 ## Installation
 
+Requires Python >=3.6 to work.
+
 For the time being, we only provide the source distribution on PyPI.
 You will need a working Cython and Numpy combination **pre-installed**.
 
